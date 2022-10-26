@@ -1,0 +1,18 @@
+{
+	"name": "antora-gh-pages-demo",
+	"version": "1.0.0",
+	"description": "This shows how to use GitHub Actions to build and publish GitHub Pages with Antora.",
+	"author": {
+		"name": "Nikolas Grottendieck",
+		"email": "git@nikolasgrottendieck.com",
+		"url": "https://nikolasgrottendieck.com"
+	},
+	"license": "MIT",
+	"dependencies": {
+	},
+	"devDependencies": {
+		"@antora/cli": "^3.1.1",
+		"@antora/site-generator": "^3.1.1",
+		"@asciidoctor/tabs": "^1.0.0-alpha.5"
+	}
+}
