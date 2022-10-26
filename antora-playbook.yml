@@ -1,0 +1,12 @@
+site:
+  title: Antora GitHub Pages Demo
+  start_page: antora-gh-pages-demo::index.adoc
+content:
+  sources:
+    - url: .
+      branches: HEAD
+ui:
+  bundle:
+    url: ./assets/ui-bundle.zip
+    #url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    #snapshot: true
