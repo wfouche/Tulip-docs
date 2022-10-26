@@ -1,0 +1,53 @@
+name: Publish Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ $default_branch ]
+
+permissions:
+  contents: read
+  id-token: write
+  pages: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Set up NodeJs
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.node-version'
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v2
+      - name: Install Dependencies
+        run: npm ci
+      - name: Generate Site
+        run: npx antora antora-playbook.yml
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: build/site
+
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
