@@ -7,6 +7,6 @@ content:
       branches: HEAD
 ui:
   bundle:
-    url: ./assets/ui-bundle.zip
+    url: ./ui-bundle.zip
     #url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
-    #snapshot: true
+    snapshot: true
