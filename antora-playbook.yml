@@ -29,6 +29,9 @@ ui:
         <link rel="stylesheet" href="{{{uiRootPath}}}/css/vendor/tabs.css">
 output:
   clean: true
+antora:
+  extensions:
+    - '@antora/lunr-extension'
 asciidoc:
   extensions:
     - '@asciidoctor/tabs'
