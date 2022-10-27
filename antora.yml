@@ -1,6 +1,6 @@
 name: antora-gh-pages-demo
 title: Antora GitHub Pages Demo
-version: ~
+version: true
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
