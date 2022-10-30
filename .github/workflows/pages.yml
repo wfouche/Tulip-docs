@@ -1,9 +1,10 @@
 name: Publish Pages
 
 on:
-  workflow_dispatch:
   push:
     branches: [ $default_branch ]
+
+  workflow_dispatch:
 
 permissions:
   contents: read
