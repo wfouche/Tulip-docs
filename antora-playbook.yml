@@ -11,6 +11,7 @@ ui:
     #url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
   supplemental_files:
+    # add @asciidoctor/tabs files during generation
     - path: css/vendor/tabs.css
       contents: './node_modules/@asciidoctor/tabs/dist/css/tabs.css'
     - path: js/vendor/tabs.js
@@ -27,6 +28,12 @@ ui:
       contents: |
         <link rel="stylesheet" href="{{{uiRootPath}}}/css/site.css">
         <link rel="stylesheet" href="{{{uiRootPath}}}/css/vendor/tabs.css">
+    # # https://docs.antora.org/antora/latest/publish-to-github-pages/
+    - path: ui.yml
+      contents: |
+        static_files:
+        - .nojekyll
+    - path: .nojekyll
 output:
   clean: true
 antora:
