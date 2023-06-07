@@ -6,11 +6,6 @@ on:
 
   workflow_dispatch:
 
-permissions:
-  contents: read
-  id-token: write
-  pages: write
-
 # Allow one concurrent deployment
 concurrency:
   group: "pages"
@@ -23,6 +18,8 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
@@ -44,6 +41,10 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate sourc
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
