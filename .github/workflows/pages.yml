@@ -2,7 +2,8 @@ name: Publish Pages
 
 on:
   push:
-    branches: [ $default_branch ]
+    branches:
+      - main
 
   workflow_dispatch:
 
