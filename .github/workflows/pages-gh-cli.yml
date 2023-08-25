@@ -100,10 +100,11 @@ jobs:
           --method POST \
           --header "Accept: application/vnd.github+json" \
           --header "X-GitHub-Api-Version: 2022-11-28" \
-          /repos/${{ github.repository }}/pages/deployment \
+          "/repos/${GH_REPOSITORY}/pages/deployment" \
           -f artifact_url=page-artifact.tar \
           -f environment='github-pages' \
           -f pages_build_version='${{ github.sha }}' \
           -f oidc_token="${GH_TOKEN}"
         env:
+          GH_REPOSITORY: ${{ github.repository }}
           GH_TOKEN: ${{ github.token }}
