@@ -1,4 +1,4 @@
-name: Publish Pages
+name: Publish Pages via GH CLI
 
 on:
   #  push:
@@ -53,7 +53,7 @@ jobs:
         id: create-page
         run: |
           jq --null-input --raw-output \
-            '{ build_type: workflow }' \
+            '{ "build_type": "workflow" }' \
             > request.json
 
           gh api \
