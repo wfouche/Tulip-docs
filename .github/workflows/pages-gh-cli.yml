@@ -115,6 +115,7 @@ jobs:
         env:
           GH_REPOSITORY: ${{ github.repository }}
           GH_RUN_ID: ${{ github.run_id }}
+          GH_TOKEN: ${{ github.token }}
       - name: Deploy to GitHub Pages
         run: |
           gh api \
