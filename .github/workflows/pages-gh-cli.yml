@@ -46,6 +46,7 @@ jobs:
   configure:
     runs-on: ubuntu-latest
     permissions:
+      contents: read    # to read the repository itself
       pages: write      # to configure to Pages
     needs: build
     steps:
