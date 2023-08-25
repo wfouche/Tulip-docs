@@ -65,6 +65,10 @@ jobs:
           GH_TOKEN: ${{ github.token }}
       - name: Setup Page
         run: |
+          jq --null-input --raw-output \
+            '{ "build_type": "workflow" }' \
+            > request.json
+
           method=POST
           if [[ ${PAGE_CONFIGURED} = true ]]; then
             method=PUT
