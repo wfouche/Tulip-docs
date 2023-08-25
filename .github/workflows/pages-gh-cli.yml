@@ -66,7 +66,7 @@ jobs:
       - name: Setup Page
         run: |
           method=POST
-          if [[ ${PAGE_CONFIGURED} ]]; then
+          if [[ ${PAGE_CONFIGURED} = true ]]; then
             method=PUT
           fi
 
