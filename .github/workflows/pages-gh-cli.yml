@@ -106,11 +106,13 @@ jobs:
       - name: Get artifact url
         id: artifact-url
         run: |
-          artifact_url=$(gh api \
+          response=$(gh api \
             -H "Accept: application/vnd.github+json" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
-            "/repos/${GH_REPOSITORY}/actions/runs/${GH_RUN_ID}/artifacts" | \
-            jq --raw-output '.artifacts[].url')
+            "/repos/${GH_REPOSITORY}/actions/runs/${GH_RUN_ID}/artifacts")
+          echo "$response"
+          echo "$response" | jq --raw-output '.artifacts[].url'
+          artifact_url=$(echo "$response" | jq --raw-output '.artifacts[].url')
           echo "url=${artifact_url}" >> "$GITHUB_OUTPUT"
         env:
           GH_REPOSITORY: ${{ github.repository }}
