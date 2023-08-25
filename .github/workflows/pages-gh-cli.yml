@@ -49,20 +49,36 @@ jobs:
       pages: write      # to configure to Pages
     needs: build
     steps:
-      - name: Create Page
-        id: create-page
+      - name: Check Page Exists
+        id: exists
         run: |
-          jq --null-input --raw-output \
-            '{ "build_type": "workflow" }' \
-            > request.json
-
-          gh api \
-            --method POST \
+          if gh api --silent \
             --header "Accept: application/vnd.github+json" \
             --header "X-GitHub-Api-Version: 2022-11-28" \
-            /repos/${{ github.repository }}/pages \
-            --input request.json \
+            "/repos/${GH_REPOSITORY}/pages" ; then
+            echo "page_configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "page_configured=false" >> "$GITHUB_OUTPUT"
+          fi
         env:
+          GH_REPOSITORY: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
+      - name: Setup Page
+        run: |
+          method=POST
+          if [[ ${PAGE_CONFIGURED} ]]; then
+            method=PUT
+          fi
+
+          gh api \
+            --method ${method} \
+            --header "Accept: application/vnd.github+json" \
+            --header "X-GitHub-Api-Version: 2022-11-28" \
+            "/repos/${GH_REPOSITORY}/pages" \
+            --input request.json
+        env:
+          PAGE_CONFIGURED: ${{ steps.exists.outputs.page_configured }}
+          GH_REPOSITORY: ${{ github.repository }}
           GH_TOKEN: ${{ github.token }}
 
   deploy:
