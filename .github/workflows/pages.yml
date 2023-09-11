@@ -24,7 +24,7 @@ jobs:
       pages: write      # to configure to Pages
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Set up NodeJs
         uses: actions/setup-node@v3
         with:
