@@ -131,4 +131,5 @@ jobs:
           GH_REPOSITORY: ${{ github.repository }}
           GH_SHA: ${{ github.sha }}
           GH_TOKEN: ${{ github.token }}
-          GH_ARTIFACT_ID: ${{ needs.jobs.build.outputs.artifact-id }}
+          GH_ARTIFACT_ID: ${{ needs.build.outputs.artifact-id }}
+          GH_ARTIFACT_URL: ${{ needs.build.outputs.artifact-url }}
