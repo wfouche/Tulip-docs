@@ -65,10 +65,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
       - name: Setup Page
         run: |
-          jq --null-input --raw-output \
-            '{ "build_type": "workflow" }' \
-            > request.json
-
           method=POST
           if [[ ${PAGE_CONFIGURED} = true ]]; then
             method=PUT
@@ -84,6 +80,9 @@ jobs:
 
 # Causes a Resource not accessible by integration (HTTP 403) error
 # Probably related to https://github.com/orgs/community/discussions/35595
+#          jq --null-input --raw-output \
+#            '{ "build_type": "workflow" }' \
+#            > request.json
 #          gh api \
 #            --method ${method} \
 #            --header "Accept: application/vnd.github+json" \
