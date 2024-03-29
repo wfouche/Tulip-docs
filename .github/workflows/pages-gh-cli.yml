@@ -23,6 +23,7 @@ jobs:
       contents: read    # to read the repository itself
     outputs: # make artifact-id available in deploy job
       artifact-id: ${{ steps.artifact-upload.outputs.artifact-id }}
+      artifact-url: ${{ steps.artifact-upload.outputs.artifact-url }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -68,6 +69,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
       - name: Setup Page
         run: |
+          echo "::debug::GH_REPOSITORY=${GH_REPOSITORY}"
+          echo "::debug::PAGE_CONFIGURED=${PAGE_CONFIGURED}"
+
           jq --null-input --raw-output \
             '{ "build_type": "workflow" }' \
             > request.json
@@ -109,6 +113,11 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         run: |
+          echo "::debug::GH_REPOSITORY=${GH_REPOSITORY}"
+          echo "::debug::GH_SHA=${GH_SHA}"
+          echo "::debug::GH_ARTIFACT_ID=${GH_ARTIFACT_ID}"
+          echo "::debug::GH_ARTIFACT_URL=${GH_ARTIFACT_URL}"
+
           gh api \
           --method POST \
           --header "Accept: application/vnd.github+json" \
