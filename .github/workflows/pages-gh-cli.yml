@@ -69,9 +69,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
       - name: Setup Page
         run: |
-          echo "::debug::GH_REPOSITORY=${GH_REPOSITORY}"
-          echo "::debug::PAGE_CONFIGURED=${PAGE_CONFIGURED}"
-
           jq --null-input --raw-output \
             '{ "build_type": "workflow" }' \
             > request.json
@@ -113,17 +110,12 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         run: |
-          echo "::debug::GH_REPOSITORY=${GH_REPOSITORY}"
-          echo "::debug::GH_SHA=${GH_SHA}"
-          echo "::debug::GH_ARTIFACT_ID=${GH_ARTIFACT_ID}"
-          echo "::debug::GH_ARTIFACT_URL=${GH_ARTIFACT_URL}"
-
           gh api \
           --method POST \
           --header "Accept: application/vnd.github+json" \
           --header "X-GitHub-Api-Version: 2022-11-28" \
           "/repos/${GH_REPOSITORY}/pages/deployments" \
-          -f artifact_id="${GH_ARTIFACT_ID}" \
+          -f artifact_id=${GH_ARTIFACT_ID} \
           -f environment='github-pages' \
           -f pages_build_version="${GH_SHA}" \
           -f oidc_token="${GH_TOKEN}" \
