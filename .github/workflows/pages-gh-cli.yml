@@ -115,7 +115,7 @@ jobs:
           --header "Accept: application/vnd.github+json" \
           --header "X-GitHub-Api-Version: 2022-11-28" \
           "/repos/${GH_REPOSITORY}/pages/deployments" \
-          -f artifact_url="${GH_ARTIFACT_URL}" \
+          -f artifact_id="${GH_ARTIFACT_ID}" \
           -f environment='github-pages' \
           -f pages_build_version="${GH_SHA}" \
           -f oidc_token="${GH_TOKEN}" \
@@ -124,5 +124,5 @@ jobs:
           GH_REPOSITORY: ${{ github.repository }}
           GH_SHA: ${{ github.sha }}
           GH_TOKEN: ${{ github.token }}
-          GH_ARTIFACT_ID: ${{ needs.build.outputs.artifact-id }}
+          GH_ARTIFACT_ID: ${{ fromJSON(needs.build.outputs.artifact-id) }}
           GH_ARTIFACT_URL: ${{ needs.build.outputs.artifact-url }}
