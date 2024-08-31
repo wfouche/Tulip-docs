@@ -1,5 +1,6 @@
 name: Deploy Pages via GH CLI
 
+# yamllint disable-line rule:truthy
 on:
   #  push:
   #    branches:
@@ -27,10 +28,15 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+      - name: Extract Tool Versions
+        id: tool-versions
+        run: |
+          node_version=$(grep -F 'node' .mise.toml | cut -d '=' -f2 | xargs)
+          echo "node_version=${node_version}" >> "$GITHUB_OUTPUT"
       - name: Set up NodeJs
         uses: actions/setup-node@v4
         with:
-          node-version-file: '.node-version'
+          node-version: ${{ steps.tool-versions.outputs.node_version }}
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

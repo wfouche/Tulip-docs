@@ -1,5 +1,6 @@
 name: Publish Pages via GH CLI
 
+# yamllint disable-line rule:truthy
 on:
   workflow_run:
     types:

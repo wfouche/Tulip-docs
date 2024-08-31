@@ -1,3 +1,6 @@
+# yamllint disable-line rule:line-length
+# yaml-language-server: $schema=https://raw.githubusercontent.com/asciidoctor/asciidoctor-intellij-plugin/main/src/main/resources/jsonSchemas/antoraPlaybookSchema.json
+# See https://gitlab.com/antora/antora/-/issues/619 for schema support
 site:
   title: Antora GitHub Pages Demo
   start_page: antora-gh-pages-demo::index.adoc
@@ -8,7 +11,8 @@ content:
 ui:
   bundle:
     url: ./ui-bundle.zip
-    #url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    # See https://gitlab.com/antora/antora/-/issues/280 as well
+    # url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
   supplemental_files:
     # add @asciidoctor/tabs files during generation
