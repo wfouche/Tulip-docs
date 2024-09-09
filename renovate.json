@@ -2,5 +2,16 @@
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"extends": [
 		"github>Okeanos/renovate-config"
+	],
+	"constraints": {
+		"node": "18"
+	},
+	"packageRules": [
+		{
+			"matchPackageNames": [
+				"node"
+			],
+			"allowedVersions": "<=18"
+		}
 	]
 }
