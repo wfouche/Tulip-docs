@@ -5,10 +5,6 @@
 		// at this time the format is location>Owner/repo//filename.ext with // as repo-file separator
 		"github>Okeanos/renovate-config//default.json5"
 	],
-	"constraints": {
-		"node": "18",
-		"nodejs": "18"
-	},
 	"packageRules": [
 		{
 			"matchPackageNames": [
