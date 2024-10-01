@@ -6,12 +6,14 @@
 		"github>Okeanos/renovate-config//default.json5"
 	],
 	"constraints": {
-		"node": "18"
+		"node": "18",
+		"nodejs": "18"
 	},
 	"packageRules": [
 		{
 			"matchPackageNames": [
-				"node"
+				"node",
+				"nodejs"
 			],
 			"allowedVersions": "<=18"
 		}
