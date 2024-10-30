@@ -3,7 +3,7 @@
 	<component name="ExternalDependencies">
 		<plugin id="com.jetbrains.sh"/>
 		<plugin id="mobi.hsz.idea.gitignore"/>
-		<plugin id="org.asciidoctor.intellij.asciidoc" />
+		<plugin id="org.asciidoctor.intellij.asciidoc"/>
 		<plugin id="org.editorconfig.editorconfigjetbrains"/>
 		<plugin id="org.intellij.plugins.markdown"/>
 		<plugin id="org.jetbrains.plugins.yaml"/>
