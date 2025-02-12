@@ -1,23 +1,47 @@
-= The Dangers of Wolpertingers
-:url-wolpertinger: https://en.wikipedia.org/wiki/Wolpertinger
+= Introduction
 
-Don't worry about gumberoos or splintercats.
-Something far more fearsome plagues the days, nights, and inbetweens.
-Wolpertingers.
+https://github.com/wfouche/Tulip[Tulip] is an advanced open-source software tool designed for load testing, stress testing, and performance regression testing. Tulip is a robust solution for evaluating the performance and stability of web applications under varying conditions, ensuring they can handle high traffic and stress levels efficiently. Similar to well-known tools like JMeter, Gatling, and Locust, Tulip provides powerful capabilities to simulate real-world scenarios and generate comprehensive reports, helping developers identify and resolve potential bottlenecks.
 
-[tabs]
-====
-Tab A:: Contents of tab A.
+== Program structure
 
-Tab B::
-+
-Contents of tab B.
+Tulip is available as a runtime JAR on Maven Central. A Tulip benchmark program consists of three parts:
 
-Tab C::
-+
---
-Contents of tab C.
+. JSONC benchmark configuration file specifying benchmark scenarios
+. User class that implement actions to be benchmarked
+. App class that activates the Tulip runtime
 
-Contains more than one block.
---
-====
+
+[plantuml,diag00,svg]
+----
+@startuml
+split
+   -[hidden]->
+   #greenyellow:benchmark_config.jsonc;
+split again
+   -[hidden]->
+   #beige:App.class;
+split again
+   -[hidden]->
+   #beige:User.class;
+split again
+   -[hidden]->
+   #azure:tulip-runtime.jar;
+end split
+:EXECUTE;
+#greenyellow:benchmark_output.json;
+#cadetblue:benchmark_report.html;
+@enduml
+----
+
+== Maven Central
+
+[source,xml]
+----
+<dependency>
+    <groupId>io.github.wfouche.tulip</groupId>
+    <artifactId>tulip-runtime</artifactId>
+    <version>2.1.5</version>
+</dependency>
+----
+
+
