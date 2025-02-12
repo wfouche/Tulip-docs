@@ -15,26 +15,20 @@ Prerequisites::
 * [optional] Scala-cli is installed to run the Scala sample benchmark program
 * Tulip has been tested and works on Linux, Windows or MacOS
 
-Run the following command to create the Kotlin version of the sample benchmark program:
+Run the following command to create the Java version of the example benchmark program:
 
-`jbang io.github.wfouche.tulip:tulip-runtime:2.1.3 Kotlin`
-
-[NOTE]
-====
-The sample benchmark program is implemented in four languages:
-
-* Java
-* Groovy
-* Kotlin
-* Scala
-
-For example, to generate the Java version of the benchmark program simply run command:
-
-`jbang io.github.wfouche.tulip:tulip-runtime:2.1.3 Java`
-====
+`$ jbang tulip-cli@wfouche init Java`
 
 Thereafter start script `./run_bench.sh` (Linux or MacOS) or `.\run_bench.cmd` (Windows).
 
 While the benchmark program is running the `benchmark_output.json` file is incrementally updated with benchmark results, and once benchmark is finished a benchmark report is generated from the benchmark output.
 
 The benchmark report file is called `benchmark_report.html`
+
+The example benchmark program is implemented in five different languages:
+
+* Java
+* Groovy
+* Kotlin
+* Scala
+* Jython
