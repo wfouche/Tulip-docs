@@ -1,1 +1,1 @@
-* xref:subpage.adoc[Additional Page]
+xref:quick-start-guide.adoc[Quick Start Guide]
