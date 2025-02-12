@@ -1,1 +1,1 @@
-xref:quick-start-guide.adoc[Quick Start Guide]
+* xref:quick-start-guide.adoc[Quick Start Guide]
