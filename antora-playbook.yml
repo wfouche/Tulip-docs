@@ -2,8 +2,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/asciidoctor/asciidoctor-intellij-plugin/main/src/main/resources/jsonSchemas/antoraPlaybookSchema.json
 # See https://gitlab.com/antora/antora/-/issues/619 for schema support
 site:
-  title: Antora GitHub Pages Demo
-  start_page: antora-gh-pages-demo::index.adoc
+  title: Tulip Load Testing Toolkit
+  start_page: tulip::index.adoc
 content:
   sources:
     - url: .
