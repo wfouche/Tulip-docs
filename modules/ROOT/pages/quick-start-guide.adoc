@@ -4,7 +4,7 @@
 |===
 |
 
-"Seeing is believing and believing is knowing and knowing beats unknowing and the unknown."
+"Seeing is believing, and believing is knowing, and knowing beats unknowing and the unknown."
 -- Philip Roth
 
 |===
@@ -25,34 +25,51 @@ Prerequisites::
 
 * [optional] https://scala-cli.virtuslab.org/[Scala-cli] is installed to run the Scala example benchmark program
 
-* Tulip has been tested and works on Linux, Windows, or MacOS
+* Tulip has been tested and works on Linux, Windows, or macOS
 
 ====
 
-== Step 1 - new benchmark
+== Demo Benchmark
+
+=== Step 1—new benchmark
 
 Run the following command to create the Java version of the example benchmark program:
 
 * `jbang tulip-cli@wfouche init Java`
 
-== Step 2 - run benchmark
+=== Step 2—run benchmark
 
 Thereafter run script
 
-* `run_bench.sh` (Linux or MacOS), or
+* `run_bench.sh` (Linux or macOS), or
 * `run_bench.cmd` (Windows)
 
 to start the benchmark program.
-
 While the benchmark program is running the `benchmark_output.json` file is incrementally updated with benchmark results.
 
-== Step 3 - view results
+=== Step 3—view results
 
 Once the benchmark is finished, a benchmark report is automatically generated from the benchmark output file.
-The benchmark report file is called `benchmark_report.html`. The benchmark script displays the benchmark report on the console, if the lynx text web browser utility is installed (as shown below).
+The benchmark report file is called `benchmark_report.html`. The benchmark script displays the benchmark report on the console using the lynx text web browser utility (as shown below).
 
 image::image-demo-benchmark-report-console.png[]
 
 Open the `benchmark_report.html` file in a browser to view the benchmark results.
 
 image::image-demo-benchmark-report-html.png[]
+
+== Fatjar Packaging
+
+The demo benchmark can be packaged into a single self-contained JAR file using command:
+
+* `jbang export fatjar io/tulip/App.java`
+
+The benchmark program and runtime are packaged into jar file `App-fatjar.jar` and can then be run with command:
+
+* `java -jar App-fatjar.jar`, or with additional JVM settings as
+
+* `java -server -Xms2g -Xmx2g -XX:+UseZGC -XX:+ZGenerational -jar App-fatjar.jar`
+
+
+Files `App-fatjar.jar` and `benchmark_config.jsonc` can be copied to another machine
+if the benchmark program needs to be run elsewhere.
