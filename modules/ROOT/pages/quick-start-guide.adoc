@@ -21,6 +21,10 @@ Run the following command to create the Java version of the example benchmark pr
 * `jbang tulip-cli@wfouche init Java`
 
 This command creates various files and directories:
+
+[cols="1a"]
+|===
+|
 ----
 ├── benchmark_config.jsonc
 ├── io
@@ -30,6 +34,7 @@ This command creates various files and directories:
 ├── run_bench.cmd
 └── run_bench.sh
 ----
+|===
 
 === Step 2—run benchmark
 
@@ -39,6 +44,9 @@ While the benchmark program is running the `benchmark_output.json` file is incre
 
 === Step 3—view results
 
+[cols="1a"]
+|===
+|
 ----
 ├── benchmark_config.adoc
 ├── benchmark_config.jsonc
@@ -51,6 +59,7 @@ While the benchmark program is running the `benchmark_output.json` file is incre
 ├── run_bench.cmd
 └── run_bench.sh
 ----
+|===
 
 Once the benchmark is finished, a benchmark report is automatically generated from the `benchmark_output.json` file.
 The benchmark report file is called `benchmark_report.html`. The benchmark script displays the benchmark report on the console using the lynx text web browser utility (as shown below).
@@ -59,7 +68,11 @@ image::image-demo-benchmark-report-console.png[]
 
 Open the `benchmark_report.html` file in a browser to view the benchmark results.
 
+[cols="1a"]
+|===
+|
 image::image-demo-benchmark-report-html.png[]
+|===
 
 === Step 4—view configuration
 
@@ -67,6 +80,9 @@ The configuration report is stored in file `benchmark_config.adoc`. Convert this
 
 * `jbang run asciidoc@wfouche benchmark_config.adoc`
 
+[cols="1a"]
+|===
+|
 ----
 ├── benchmark_config.adoc
 ├── benchmark_config.html
@@ -80,10 +96,15 @@ The configuration report is stored in file `benchmark_config.adoc`. Convert this
 ├── run_bench.cmd
 ├── run_bench.sh
 ----
+|===
 
 View the configuration report file `benchmark_config.html` in a browser.
 
+[cols="1a"]
+|===
+|
 image::image-demo-benchmark-config-report-1.png[]
+|===
 
 == Fatjar Packaging
 
