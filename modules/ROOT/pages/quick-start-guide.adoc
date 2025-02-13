@@ -9,7 +9,6 @@
 
 |===
 
-== Overview
 
 The best and quickest way to get started with Tulip is to try out the sample benchmark program.
 
@@ -30,13 +29,13 @@ Prerequisites::
 
 ====
 
-=== Step 1 - new benchmark
+== Step 1 - new benchmark
 
 Run the following command to create the Java version of the example benchmark program:
 
 * `jbang tulip-cli@wfouche init Java`
 
-=== Step 2 - run benchmark
+== Step 2 - run benchmark
 
 Thereafter run script
 
@@ -47,7 +46,7 @@ to start the benchmark program.
 
 While the benchmark program is running the `benchmark_output.json` file is incrementally updated with benchmark results.
 
-=== Step 3 - view results
+== Step 3 - view results
 
 Once the benchmark is finished, a benchmark report is automatically generated from the benchmark output file.
 The benchmark report file is called `benchmark_report.html`. The benchmark script displays the benchmark report on the console, if the lynx text web browser utility is installed (as shown below).
