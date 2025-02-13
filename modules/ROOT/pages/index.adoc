@@ -44,6 +44,7 @@ The following languages are currently supported and tested to work with the Tuli
 
 == Maven Central
 
+.https://mvnrepository.com/artifact/io.github.wfouche.tulip/tulip-runtime
 [source,xml]
 ----
 <dependency>
