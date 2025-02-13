@@ -1,2 +1,3 @@
 * xref:index.adoc[Introduction]
+* xref:prerequisites.adoc[Prerequisites]
 * xref:quick-start-guide.adoc[Quick Start Guide]

@@ -12,23 +12,6 @@
 
 The best and quickest way to get started with Tulip is to try out the sample benchmark program.
 
-[NOTE]
-====
-
-Prerequisites::
-
-* https://adoptium.net/temurin/releases/[OpenJDK] 21 or later version is installed
-
-* https://www.jbang.dev/[JBang] 0.121.0 or later version is installed
-
-* [optional] https://lynx.invisible-island.net/current/index.html[Lynx] text web browser is used to print a text-only version of the  benchmark report to the display console.
-
-* [optional] https://scala-cli.virtuslab.org/[Scala-cli] is installed to run the Scala example benchmark program
-
-* Tulip has been tested and works on Linux, Windows, or macOS
-
-====
-
 == Demo Benchmark
 
 === Step 1—new benchmark
