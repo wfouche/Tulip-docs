@@ -9,6 +9,10 @@
 
 |===
 
+== Overview
+
+The best and quickest way to get started with Tulip is to try out the sample benchmark program.
+
 [NOTE]
 ====
 
@@ -25,10 +29,6 @@ Prerequisites::
 * Tulip has been tested and works on Linux, Windows, or MacOS
 
 ====
-
-== Overview
-
-The best and quickest way to get started with Tulip is to try out the sample benchmark program.
 
 === Step 1 - new benchmark
 
