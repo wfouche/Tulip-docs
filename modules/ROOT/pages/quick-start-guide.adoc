@@ -64,7 +64,11 @@ While the benchmark program is running the `benchmark_output.json` file is incre
 Once the benchmark is finished, a benchmark report is automatically generated from the `benchmark_output.json` file.
 The benchmark report file is called `benchmark_report.html`. The benchmark script displays the benchmark report on the console using the lynx text web browser utility (as shown below).
 
+[cols="1a"]
+|===
+|
 image::image-demo-benchmark-report-console.png[]
+|===
 
 Open the `benchmark_report.html` file in a browser to view the benchmark results.
 
