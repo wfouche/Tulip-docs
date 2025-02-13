@@ -20,7 +20,7 @@ Run the following command to create the Java version of the example benchmark pr
 
 * `jbang tulip-cli@wfouche init Java`
 
-This command creates files and directories as shown below:
+This command creates various files and directories:
 ----
 ├── benchmark_config.jsonc
 ├── io
@@ -51,6 +51,8 @@ image::image-demo-benchmark-report-console.png[]
 Open the `benchmark_report.html` file in a browser to view the benchmark results.
 
 image::image-demo-benchmark-report-html.png[]
+
+=== Step 4—view configuration
 
 == Fatjar Packaging
 
