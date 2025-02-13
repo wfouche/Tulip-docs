@@ -20,7 +20,7 @@ Run the following command to create the Java version of the example benchmark pr
 
 * `jbang tulip-cli@wfouche init Java`
 
-This command create files and directories as shown below:
+This command creates files and directories as shown below:
 ----
 ├── benchmark_config.jsonc
 ├── io
