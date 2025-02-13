@@ -33,17 +33,26 @@ This command creates various files and directories:
 
 === Step 2—run benchmark
 
-Thereafter run script
+Run script `run_bench.sh` (Linux or macOS), or `run_bench.cmd` (Windows) to start the benchmark program.
 
-* `run_bench.sh` (Linux or macOS), or
-* `run_bench.cmd` (Windows)
-
-to start the benchmark program.
 While the benchmark program is running the `benchmark_output.json` file is incrementally updated with benchmark results.
 
 === Step 3—view results
 
-Once the benchmark is finished, a benchmark report is automatically generated from the benchmark output file.
+----
+├── benchmark_config.adoc
+├── benchmark_config.jsonc
+├── benchmark_output.json
+├── benchmark_report.html
+├── io
+│   └── tulip
+│       ├── App.scala
+│       └── HttpUser.scala
+├── run_bench.cmd
+└── run_bench.sh
+----
+
+Once the benchmark is finished, a benchmark report is automatically generated from the `benchmark_output.json` file.
 The benchmark report file is called `benchmark_report.html`. The benchmark script displays the benchmark report on the console using the lynx text web browser utility (as shown below).
 
 image::image-demo-benchmark-report-console.png[]
@@ -53,6 +62,28 @@ Open the `benchmark_report.html` file in a browser to view the benchmark results
 image::image-demo-benchmark-report-html.png[]
 
 === Step 4—view configuration
+
+The configuration report is stored in file `benchmark_config.adoc`. Convert this file to html with command:
+
+* `jbang run asciidoc@wfouche benchmark_config.adoc`
+
+----
+├── benchmark_config.adoc
+├── benchmark_config.html
+├── benchmark_config.jsonc
+├── benchmark_output.json
+├── benchmark_report.html
+├── io
+│   └── tulip
+│       ├── App.scala
+│       └── HttpUser.scala
+├── run_bench.cmd
+├── run_bench.sh
+----
+
+View the configuration report file `benchmark_config.html` in a browser.
+
+image::image-demo-benchmark-config-report-1.png[]
 
 == Fatjar Packaging
 
