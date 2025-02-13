@@ -1,34 +1,59 @@
-= Quick start guide
+= Quick Start Guide
 
 [cols="1a"]
 |===
 |
+
 "Seeing is believing and believing is knowing and knowing beats unknowing and the unknown."
 -- Philip Roth
+
 |===
+
+[NOTE]
+====
+
+Prerequisites::
+
+* https://adoptium.net/temurin/releases/[OpenJDK] 21 or later version is installed
+
+* https://www.jbang.dev/[JBang] 0.121.0 or later version is installed
+
+* [optional] https://lynx.invisible-island.net/current/index.html[Lynx] text web browser is used to print a text-only version of the  benchmark report to the display console.
+
+* [optional] https://scala-cli.virtuslab.org/[Scala-cli] is installed to run the Scala example benchmark program
+
+* Tulip has been tested and works on Linux, Windows, or MacOS
+
+====
+
+== Overview
 
 The best and quickest way to get started with Tulip is to try out the sample benchmark program.
 
-Prerequisites::
-* OpenJDK 21 or later version is installed
-* https://www.jbang.dev/[JBang] 0.121.0 or later version is installed
-* [optional] Scala-cli is installed to run the Scala sample benchmark program
-* Tulip has been tested and works on Linux, Windows or MacOS
+=== Step 1 - new benchmark
 
 Run the following command to create the Java version of the example benchmark program:
 
-`$ jbang tulip-cli@wfouche init Java`
+* `jbang tulip-cli@wfouche init Java`
 
-Thereafter start script `./run_bench.sh` (Linux or MacOS) or `.\run_bench.cmd` (Windows).
+=== Step 2 - run benchmark
 
-While the benchmark program is running the `benchmark_output.json` file is incrementally updated with benchmark results, and once benchmark is finished a benchmark report is generated from the benchmark output.
+Thereafter run script
 
-The benchmark report file is called `benchmark_report.html`
+* `run_bench.sh` (Linux or MacOS), or
+* `run_bench.cmd` (Windows)
 
-The example benchmark program is implemented in five different languages:
+to start the benchmark program.
 
-* Java
-* Groovy
-* Kotlin
-* Scala
-* Jython
+While the benchmark program is running the `benchmark_output.json` file is incrementally updated with benchmark results.
+
+=== Step 3 - view results
+
+Once the benchmark is finished, a benchmark report is automatically generated from the benchmark output file.
+The benchmark report file is called `benchmark_report.html`. The benchmark script displays the benchmark report on the console, if the lynx text web browser utility is installed (as shown below).
+
+image::image-demo-benchmark-report-console.png[]
+
+Open the `benchmark_report.html` file in a browser to view the benchmark results.
+
+image::image-demo-benchmark-report-html.png[]
