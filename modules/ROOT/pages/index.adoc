@@ -1,15 +1,17 @@
 = Introduction
 
-https://github.com/wfouche/Tulip[Tulip] is an advanced open-source software tool designed for load testing, stress testing, and performance regression testing. Tulip is a robust solution for evaluating the performance and stability of web applications under varying conditions, ensuring they can handle high traffic and stress levels efficiently. Similar to well-known tools like JMeter, Gatling, and Locust, Tulip provides powerful capabilities to simulate real-world scenarios and generate comprehensive reports, helping developers identify and resolve potential bottlenecks.
+https://github.com/wfouche/Tulip[Tulip] is an advanced open source software tool designed for load testing, stress testing, and performance regression testing.
+Tulip is a robust solution for evaluating the performance and stability of web applications under varying conditions, ensuring they can handle high traffic and stress levels efficiently.
+Similar to well-known tools like JMeter, Gatling, and Locust, Tulip provides powerful capabilities to simulate real-world scenarios and generate comprehensive reports, helping developers identify and resolve potential bottlenecks.
 
 == Program structure
 
-Tulip is available as a runtime JAR on Maven Central. A Tulip benchmark program consists of three parts:
+A Tulip benchmark program consists of four parts:
 
-. JSONC benchmark configuration file specifying benchmark scenarios
+. Benchmark configuration file specifying benchmark scenarios to be tested
 . User class that implement actions to be benchmarked
 . App class that activates the Tulip runtime
-
+. Tulip runtime .jar file available from Maven Central
 
 [plantuml,diag00,svg]
 ----
@@ -19,10 +21,10 @@ split
    #greenyellow:benchmark_config.jsonc;
 split again
    -[hidden]->
-   #beige:App.class;
+   #beige:User.class;
 split again
    -[hidden]->
-   #beige:User.class;
+   #beige:App.class;
 split again
    -[hidden]->
    #azure:tulip-runtime.jar;
@@ -32,6 +34,13 @@ end split
 #cadetblue:benchmark_report.html;
 @enduml
 ----
+
+The Tulip runtime is written in Kotlin.
+Tulip benchmark programs (App and User classes) can be written in any Java Virtual Machine (JVM) programming language.
+The following languages are currently supported and tested to work with the Tulip runtime:
+
+* Java, Kotlin, Scala
+* Groovy, Jython
 
 == Maven Central
 
@@ -44,4 +53,11 @@ end split
 </dependency>
 ----
 
+== Source Code
 
+https://github.com/wfouche/Tulip
+
+
+== Social Media
+
+https://x.com/Tulip_ltt
