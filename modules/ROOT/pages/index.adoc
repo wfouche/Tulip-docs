@@ -41,6 +41,7 @@ The following languages are currently supported and tested to work with the Tuli
 
 * Java, Kotlin, Scala
 * Groovy, Jython
+* Clojure (in development)
 
 == Maven Central
 
