@@ -9,3 +9,51 @@
 ** jq '. + {"aps_rate": .throughput_rate} | del(.throughput_rate)'
 
 * Run Python script `convert_200_to_215.py`.
+
+[source,python]
+----
+import json
+from collections import OrderedDict
+import sys
+
+filename = sys.argv[1]
+fh = open(filename)
+jb = json.load(fh, object_pairs_hook=OrderedDict)
+
+# Fix toplevel structure
+jb_1 = OrderedDict()
+jb_1["actions"] = jb["static"]
+if "workflows" in jb_1["actions"].keys():
+    jb_1["workflows"] = jb_1["actions"]["workflows"]
+    del jb_1["actions"]["workflows"]
+jb_1["benchmarks"] = jb["benchmarks"]
+jb_1["contexts"] = jb["contexts"]
+
+# Fix contexts
+clist = jb_1["contexts"]
+d = OrderedDict()
+for e in clist:
+    name = e["name"]
+    del e["name"]
+    d[name] = e
+jb_1["contexts"] = d
+
+# Fix benchmarks
+blist = jb_1["benchmarks"]
+d = OrderedDict()
+for e in blist:
+    name = e["name"]
+    del e["name"]
+    d[name] = e
+jb_1["benchmarks"] = d
+
+# Fix benchmark record names
+# throughput_rate -> aps_rate
+# benchmark_repeat_count -> benchmark_iterations
+# actions -> scenario_actions
+# workflow -> scenario_workflow
+
+print(json.dumps(jb_1, indent=4))
+----
+
+
