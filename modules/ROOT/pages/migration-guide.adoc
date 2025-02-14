@@ -1,7 +1,11 @@
 = Migration Guide
 
-== 2.0.0
+== From 2.0.0 to 2.1.5
 
-== 2.1.0
+* `{ "static": {} }` -> `{ "actions": {} }`
+** jq '. + {"actions": .static} | del(.static)'
 
-== 2.1.5
+* `throughput_rate` -> `aps_rate`
+** jq '. + {"aps_rate": .throughput_rate} | del(.throughput_rate)'
+
+* Run Python script `convert_200_to_215.py`.
