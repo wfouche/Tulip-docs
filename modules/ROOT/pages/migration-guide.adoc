@@ -10,6 +10,7 @@
 
 * Run Python script `convert_200_to_215.py`.
 
+.python3 convert_200_to_215.py benchmark_config.json > new_config.json
 [source,python]
 ----
 import json
