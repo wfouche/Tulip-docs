@@ -44,16 +44,14 @@ d = OrderedDict()
 for e in blist:
     name = e["name"]
     del e["name"]
+    text = json.dumps(e)
+    text = text.replace("throughput_rate", "aps_rate")
+    text = text.replace("benchmark_repeat_count", "benchmark_iterations")
+    text = text.replace("actions", "scenario_actions")
+    text = text.replace("workflow", "scenario_workflow")
+    e = json.loads(text)
     d[name] = e
 jb_1["benchmarks"] = d
 
-# Fix benchmark record names
-# throughput_rate -> aps_rate
-# benchmark_repeat_count -> benchmark_iterations
-# actions -> scenario_actions
-# workflow -> scenario_workflow
-
 print(json.dumps(jb_1, indent=4))
 ----
-
-
