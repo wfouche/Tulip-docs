@@ -54,8 +54,8 @@ While the benchmark program is running the `benchmark_output.json` file is incre
 ├── benchmark_report.html
 ├── io
 │   └── tulip
-│       ├── App.scala
-│       └── HttpUser.scala
+│       ├── App.java
+│       └── HttpUser.java
 ├── run_bench.cmd
 └── run_bench.sh
 ----
@@ -95,8 +95,8 @@ The configuration report is stored in file `benchmark_config.adoc`. Convert this
 ├── benchmark_report.html
 ├── io
 │   └── tulip
-│       ├── App.scala
-│       └── HttpUser.scala
+│       ├── App.java
+│       └── HttpUser.java
 ├── run_bench.cmd
 ├── run_bench.sh
 ----
