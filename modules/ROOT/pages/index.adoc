@@ -18,7 +18,7 @@ A Tulip benchmark program consists of four parts:
 @startuml
 split
    -[hidden]->
-   #greenyellow:benchmark_config.jsonc;
+   #greenyellow:benchmark_config.json;
 split again
    -[hidden]->
    #beige:User.class;
