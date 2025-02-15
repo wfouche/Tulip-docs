@@ -1,4 +1,4 @@
-= HTTP Benchmark Example
+= HTTP Benchmark Examined
 
 == Step 1—new benchmark
 
