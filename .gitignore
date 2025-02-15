@@ -174,3 +174,4 @@ node_modules/
 ### Custom
 # GitHub Pages / Antora Output folder
 build/
+/.gradle/
