@@ -6,4 +6,8 @@ Tulip 2.0.0 was released at the start of December 2024.
 
 == 2.1.5
 
-Since the release of Tulip 2.0.0 a few changes were required to the configuration file layout. No changes are required to upgraded to the latest stable release.
+Tulip 2.1.5 was released at the end of January 2025.
+
+Since the release of Tulip 2.0.0, a few changes were made to the configuration file layout.
+A Python script is provided to upgrade the configuration file to the new format.
+However, no benchmark program source code changes are required to upgrade to the latest release.
