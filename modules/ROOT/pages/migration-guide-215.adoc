@@ -8,7 +8,7 @@ A Python script is provided to apply the required changes to version 2.0.0 confi
 $ `python3 convert_200_to_215.py 200_config.json > 215_config.json`
 
 .convert_200_to_215.py
-[source,python,linenums]
+[source]
 ----
 import json
 from collections import OrderedDict
