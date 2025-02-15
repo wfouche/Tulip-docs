@@ -2,6 +2,8 @@
 
 == From 2.0.0 to 2.1.5
 
+=== benchmark_config.json
+
 $ `python3 convert_200_to_215.py 200_config.json > 215_config.json`
 
 .convert_200_to_215.py
@@ -50,3 +52,30 @@ jb_1["benchmarks"] = d
 
 print(json.dumps(jb_1, indent=4))
 ----
+
+=== App.java
+
+Change the version number of the  tulip-runtime Maven dependency from 2.0.0 to 2.1.5.
+
+----
+///usr/bin/env jbang "$0" "$@" ; exit $?
+//DEPS io.github.wfouche.tulip:tulip-runtime:2.1.5  <1>
+//DEPS org.springframework.boot:spring-boot-starter-web:3.4.2
+//DEPS org.slf4j:slf4j-api:2.0.16
+//DEPS ch.qos.logback:logback-core:1.5.16
+//DEPS ch.qos.logback:logback-classic:1.5.16
+//SOURCES HttpUser.java
+//JAVA 21
+
+package io.tulip;
+
+import io.github.wfouche.tulip.api.TulipApi;
+
+public class App {
+   public static void main(String[] args) {
+      TulipApi.runTulip("benchmark_config.json");
+   }
+}
+----
+<1> tulip-runtime:<version>
+
