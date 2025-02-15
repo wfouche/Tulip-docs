@@ -1,0 +1,31 @@
+= Utilities and Scripts
+
+== asciidoc
+
+* jbang run asciidoc@wfouche filename.adoc
+
+== kwrk
+
+* jbang run kwrk@wfouche --url http://jsonplaceholder.typicode.com/posts/1
+
+== run_bench
+
+[tabs]
+====
+Tab A:: Contents of tab A.
+
+Tab B::
++
+Contents of tab B.
+
+Tab C::
++
+--
+Contents of tab C.
+
+Contains more than one block.
+--
+====
+
+
+
