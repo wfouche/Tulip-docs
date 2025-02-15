@@ -1,8 +1,6 @@
-= Migration Guide
+= Upgrade from 2.0.0 to 2.1.5
 
-== From 2.0.0 to 2.1.5
-
-=== Configuration
+== Configuration
 
 The benchmark configuration file layout has changed slightly.
 A Python script is provided to apply the required changes to version 2.0.0 configuration files.
@@ -56,7 +54,7 @@ jb_1["benchmarks"] = d
 print(json.dumps(jb_1, indent=4))
 ----
 
-=== Runtime
+== Runtime
 
 Change the version number of the  tulip-runtime Maven dependency from 2.0.0 to 2.1.5.
 
