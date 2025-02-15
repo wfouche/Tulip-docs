@@ -2,11 +2,17 @@
 
 == asciidoc
 
-* jbang run asciidoc@wfouche filename.adoc
+[source,bash]
+----
+jbang run asciidoc@wfouche filename.adoc
+----
 
 == kwrk
 
-* jbang run kwrk@wfouche --url http://jsonplaceholder.typicode.com/posts/1
+[source,bash]
+----
+jbang run kwrk@wfouche --url http://jsonplaceholder.typicode.com/posts/1
+----
 
 == run_bench
 
