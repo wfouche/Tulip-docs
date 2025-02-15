@@ -1,5 +1,5 @@
 * xref:index.adoc[Introduction]
 * xref:prerequisites.adoc[Prerequisites]
 * xref:quick-start-guide.adoc[Quick Start Guide]
-* Migration Guide
-** xref:migration-guide.adoc[2.0.0 to 2.1.5]
+* xref:migration-guide.adoc[Migration Guide]
+** xref:migration-guide-215.adoc[2.0.0 to 2.1.5]
