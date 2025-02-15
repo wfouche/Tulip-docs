@@ -8,7 +8,7 @@ A Python script is provided to apply the required changes to version 2.0.0 confi
 $ `python3 convert_200_to_215.py 200_config.json > 215_config.json`
 
 .convert_200_to_215.py
-[source,bash]
+[source,python]
 ----
 import json
 from collections import OrderedDict
@@ -59,7 +59,7 @@ print(json.dumps(jb_1, indent=4))
 Change the version number of the  tulip-runtime Maven dependency from 2.0.0 to 2.1.5.
 
 .App.java
-[source,bash,linenums]
+[source,java]
 ----
 ///usr/bin/env jbang "$0" "$@" ; exit $?
 //DEPS io.github.wfouche.tulip:tulip-runtime:2.1.5  // <1>
