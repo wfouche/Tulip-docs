@@ -2,7 +2,10 @@
 
 == From 2.0.0 to 2.1.5
 
-=== benchmark_config.json
+=== Configuration
+
+The benchmark configuration file layout has changed slightly.
+A Python script is provided to apply the required changes to version 2.0.0 configuration files.
 
 $ `python3 convert_200_to_215.py 200_config.json > 215_config.json`
 
@@ -53,10 +56,11 @@ jb_1["benchmarks"] = d
 print(json.dumps(jb_1, indent=4))
 ----
 
-=== App.java
+=== Runtime
 
 Change the version number of the  tulip-runtime Maven dependency from 2.0.0 to 2.1.5.
 
+.App.java
 ----
 ///usr/bin/env jbang "$0" "$@" ; exit $?
 //DEPS io.github.wfouche.tulip:tulip-runtime:2.1.5  <1>
