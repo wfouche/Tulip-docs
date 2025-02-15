@@ -35,9 +35,9 @@ end split
 @enduml
 ----
 
-The Tulip runtime is written in Kotlin.
+The Tulip runtime is written in https://kotlinlang.org/[Kotlin].
 Tulip benchmark programs (App and User classes) can be written in any Java Virtual Machine (JVM) programming language.
-The following languages are currently supported and tested to work with the Tulip runtime:
+The following languages are currently supported:
 
 * Java, Kotlin, Scala
 * Groovy, Jython
