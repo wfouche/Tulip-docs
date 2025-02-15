@@ -57,8 +57,9 @@ The following languages are currently supported and tested to work with the Tuli
 
 == Source Code
 
-https://github.com/wfouche/Tulip
+https://github.com/wfouche/Tulip/
 
+https://github.com/wfouche/Tulip-docs/
 
 == Social Media
 
