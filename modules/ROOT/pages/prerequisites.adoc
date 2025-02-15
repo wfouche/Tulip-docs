@@ -15,4 +15,4 @@ Tulip has the following software requirements that must be met it can be used:
 
 * [optional] https://scala-cli.virtuslab.org/[Scala-cli] is installed to run the Scala example benchmark program
 
-* Tulip has been tested and works on Linux, Windows, or macOS
+* Tulip supports Linux, Windows, and macOS.
