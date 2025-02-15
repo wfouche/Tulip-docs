@@ -7,6 +7,9 @@ A Python script is provided to apply the required changes to version 2.0.0 confi
 
 $ `python3 convert_200_to_215.py 200_config.json > 215_config.json`
 
+[cols="1a"]
+|===
+|
 .convert_200_to_215.py
 [source,python]
 ----
@@ -53,11 +56,15 @@ jb_1["benchmarks"] = d
 
 print(json.dumps(jb_1, indent=4))
 ----
+|===
 
 == Runtime
 
 Change the version number of the  tulip-runtime Maven dependency from 2.0.0 to 2.1.5.
 
+[cols="1a"]
+|===
+|
 .App.java
 [source,java]
 ----
@@ -81,4 +88,4 @@ public class App {
 }
 ----
 <1> tulip-runtime:<version>
-
+|===
