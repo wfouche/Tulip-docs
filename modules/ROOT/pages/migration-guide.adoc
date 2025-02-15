@@ -61,9 +61,10 @@ print(json.dumps(jb_1, indent=4))
 Change the version number of the  tulip-runtime Maven dependency from 2.0.0 to 2.1.5.
 
 .App.java
+[source,java]
 ----
 ///usr/bin/env jbang "$0" "$@" ; exit $?
-//DEPS io.github.wfouche.tulip:tulip-runtime:2.1.5  <1>
+//DEPS io.github.wfouche.tulip:tulip-runtime:2.1.5  // <1>
 //DEPS org.springframework.boot:spring-boot-starter-web:3.4.2
 //DEPS org.slf4j:slf4j-api:2.0.16
 //DEPS ch.qos.logback:logback-core:1.5.16
