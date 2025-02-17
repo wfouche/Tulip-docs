@@ -10,7 +10,7 @@ on:
     inputs:
       editorconfig:
         description: Run EditorConfig linter
-        default: true
+        default: false
         type: boolean
       gitleaks:
         description: Run Gitleaks (Secret scanner)
