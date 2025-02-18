@@ -30,6 +30,12 @@ if "workflows" in jb_1["actions"].keys():
 jb_1["benchmarks"] = jb["benchmarks"]
 jb_1["contexts"] = jb["contexts"]
 
+if "user_actions" in jb_1["actions"].keys():
+    x = jb_1["actions"]["user_actions"]
+    if "99" in x.keys():
+        x["100"] = x["99"]
+        del x["99"]
+
 # Fix contexts
 clist = jb_1["contexts"]
 d = OrderedDict()
@@ -50,6 +56,7 @@ for e in blist:
     text = text.replace("benchmark_repeat_count", "benchmark_iterations")
     text = text.replace("actions", "scenario_actions")
     text = text.replace("workflow", "scenario_workflow")
+    text = text.replace("99", "100")
     e = json.loads(text)
     d[name] = e
 jb_1["benchmarks"] = d
