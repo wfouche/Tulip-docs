@@ -45,7 +45,6 @@ The following languages are currently supported:
 
 == Maven Central
 
-.https://mvnrepository.com/artifact/io.github.wfouche.tulip/tulip-runtime
 [source,xml]
 ----
 <dependency>
@@ -54,6 +53,8 @@ The following languages are currently supported:
     <version>2.1.5</version>
 </dependency>
 ----
+
+https://mvnrepository.com/artifact/io.github.wfouche.tulip/tulip-runtime
 
 == Source Code
 
