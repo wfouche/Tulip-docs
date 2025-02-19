@@ -1,4 +1,5 @@
 = Introduction
+:use-kroki: 0
 
 https://github.com/wfouche/Tulip[Tulip] is an advanced open source software toolkit designed for load testing, stress testing, and performance regression testing.
 Tulip is a robust solution for evaluating the performance and stability of web applications under varying conditions, ensuring they can handle high traffic and stress levels efficiently.
@@ -13,7 +14,12 @@ A Tulip benchmark program consists of four parts:
 . App class that activates the Tulip runtime
 . Tulip runtime .jar file available from Maven Central
 
-[plantuml,diag00,png]
+ifeval::[{use-kroki} == 0]
+image::diag0.svg[]
+endif::[]
+
+ifeval::[{use-kroki} == 1]
+[plantuml,diag0,svg]
 ----
 @startuml
 split
@@ -34,6 +40,7 @@ end split
 #cadetblue:benchmark_report.html;
 @enduml
 ----
+endif::[]
 
 The Tulip runtime is written in https://kotlinlang.org/[Kotlin].
 Tulip benchmark programs (App and User classes) can be written in any Java Virtual Machine (JVM) programming language.
