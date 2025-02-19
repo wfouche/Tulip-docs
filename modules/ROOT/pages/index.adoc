@@ -13,7 +13,7 @@ A Tulip benchmark program consists of four parts:
 . App class that activates the Tulip runtime
 . Tulip runtime .jar file available from Maven Central
 
-[plantuml,diag00,svg]
+[plantuml,diag00,png]
 ----
 @startuml
 split
