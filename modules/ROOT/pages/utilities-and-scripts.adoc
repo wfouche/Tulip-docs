@@ -26,12 +26,12 @@ Options:
 
 === Test Benchmark 1
 
-In this test we're going to send http request at a rate of 5.0 requests per second (rps) to <jsonplaceholder>/posts/1.
+This test sends HTTP requests at a rate of 5.0 requests per second (rps) to <jsonplaceholder>/posts/1.
 
 .Command
 [source,text]
 ----
-jbang run kwrk@wfouche --url=http://jsonplaceholder.typicode.com/posts/1
+jbang run kwrk@wfouche --url=http://jsonplaceholder.typicode.com/posts/1 --rps=10.0
 ----
 
 .Command Output
@@ -53,7 +53,7 @@ Output filename = kwrk_output.json
 Report filename = kwrk_report.html
 ----
 
-Open the `kwrk_report.html` file in a browser to view the benchmark results.
+Open file `kwrk_report.html` in a browser to view the benchmark results.
 
 image::kwrk-bench-1.png[]
 
