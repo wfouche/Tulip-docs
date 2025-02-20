@@ -63,7 +63,7 @@ image::kwrk-bench-1.png[]
 
 This test sends HTTP requests at a rate of 10,000 requests per second (rps) to <localhost:7070>/posts/1.
 
-Open two terminal windows. Run the `Test Http Service` in the first terminal window.
+Open two terminal windows. Run the *Test Http Service* in the first terminal window, and *kwrk* in the second terminal window.
 
 .Terminal 1
 [source,text]
