@@ -31,7 +31,7 @@ This test sends HTTP requests at a rate of 5.0 requests per second (rps) to <jso
 .Command
 [source,text]
 ----
-jbang run kwrk@wfouche --url=http://jsonplaceholder.typicode.com/posts/1 --rps=10.0
+jbang run kwrk@wfouche --rps=10.0 --url=http://jsonplaceholder.typicode.com/posts/1
 ----
 
 .Command Output
