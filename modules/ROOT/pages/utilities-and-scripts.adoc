@@ -43,7 +43,7 @@ kwrk:
   --rps 10.0
   --threads 2
   --duration 30
-  --repeat 3
+  --iterations 3
   --url http://jsonplaceholder.typicode.com/posts/1
 
 Tulip 2.1.5 (Java: Microsoft 21.0.6+7-LTS, Kotlin: 2.0.21)
@@ -88,7 +88,7 @@ kwrk:
   --rps 10000.0
   --threads 2
   --duration 30
-  --repeat 3
+  --iterations 3
   --url http://localhost:7070/posts/1
 
 Tulip 2.1.5 (Java: Microsoft 21.0.6+7-LTS, Kotlin: 2.0.21)
