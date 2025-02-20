@@ -1,123 +1,92 @@
 = Utilities and Scripts
 
-== asciidoc
+== Asciidoc
 
 [source,bash]
 ----
 jbang run asciidoc@wfouche filename.adoc
 ----
 
-== kwrk
+== Kwrk
+
+`kwrk` is a benchmark utility, implemented in Kotlin using the Tulip runtime, which is similar in functionality to `wrk` and `wrk2`. See article "https://nitikagarw.medium.com/getting-started-with-wrk-and-wrk2-benchmarking-6e3cdc76555f[Getting started with wrk and wrk2 benchmarking]" for more information on using these two http benchmark utilities.
 
 [source,bash]
 ----
-jbang run kwrk@wfouche --url http://jsonplaceholder.typicode.com/posts/1
+Usage: kwrk [<options>]
+
+Options:
+  --rps=<float>             # default value is 5.0
+  --threads=<int>           # default value is 2
+  --duration=<int>          # default value is 30 seconds
+  --iterations=<int>        # default value is 3
+  --url=<text>              # no default value
+  -h, --help          Show this message and exit
 ----
 
-== run_bench
+=== Test Benchmark 1
 
-[tabs]
-====
-Linux::
-+
---
+In this test we're going to send http request at a rate of 5.0 requests per second (rps) to <jsonplaceholder>/posts/1.
+
+.Command
+[source,text]
+----
+jbang run kwrk@wfouche --url=http://jsonplaceholder.typicode.com/posts/1
+----
+
+.Command Output
 [source,bash]
 ----
-#!/bin/bash
+kwrk:
+  --rps 5.0
+  --threads 2
+  --duration 30
+  --repeat 3
+  --url http://jsonplaceholder.typicode.com/posts/1
 
-export TULIP_PARAMS="10000.0 http localhost:7070"
-export TULIP_JAVA_OPTIONS="-server -Xms2g -Xmx2g -XX:+UseZGC -XX:+ZGenerational"
+Tulip 2.1.5 (Java: Microsoft 21.0.6+7-LTS, Kotlin: 2.0.21)
 
-rm -f -r Java
-mkdir -p Java
-cd Java || exit
-echo ""
-jbang run tulip-cli@wfouche init Java $TULIP_PARAMS
-. ./run_bench.sh
-cd ..
+....
+....
 
-rm -f -r Groovy
-mkdir -p Groovy
-cd Groovy || exit
-echo ""
-jbang run tulip-cli@wfouche init Groovy $TULIP_PARAMS
-
-. ./run_bench.sh
-cd ..
-
-rm -f -r Kotlin
-mkdir -p Kotlin
-cd Kotlin || exit
-echo ""
-jbang run tulip-cli@wfouche init Kotlin $TULIP_PARAMS
-. ./run_bench.sh
-cd ..
-
-rm -f -r Scala
-mkdir -p Scala
-cd Scala || exit
-echo ""
-jbang run tulip-cli@wfouche init Scala $TULIP_PARAMS
-. ./run_bench.sh
-cd ..
-
-rm -f -r Jython
-mkdir -p Jython
-cd Jython || exit
-echo ""
-jbang run tulip-cli@wfouche init Jython $TULIP_PARAMS
-. ./run_bench.sh
-cd ..
-
-echo ""
-firefox Java/benchmark_report.html Groovy/benchmark_report.html Kotlin/benchmark_report.html Scala/benchmark_report.html Jython/benchmark_report.html
+Output filename = kwrk_output.json
+Report filename = kwrk_report.html
 ----
---
 
-Windows::
-+
-Contents of tab B.
+Open the `kwrk_report.html` file in a browser to view the benchmark results.
 
-macOS::
-+
---
-Contents of tab macOS.
---
-====
+image::kwrk-bench-1.png[]
 
+=== Test Benchmark 2
 
+TBD.
 
-== run_javalin
+== Test Http Service
 
-[source,bash]
+$ jbang run HttpService.java
+
+.TestHttpService.java
+[source,java]
 ----
 ///usr/bin/env jbang "$0" "$@" ; exit $?
 
 //DEPS io.javalin:javalin:6.4.0
-//DEPS org.slf4j:slf4j-simple:2.0.13
+//DEPS org.slf4j:slf4j-simple:2.0.16
 
 // https://javalin.io/
 import io.javalin.Javalin;
-import java.lang.System;
 
-public class JavalinServer {
+public class TestHttpService {
     public static void main(String[] args) {
         var app = Javalin.create(/*config*/)
-            .get("/", ctx -> ctx.result("{\"code\": \"OK\"}").contentType("application/json"))
-            .get("/exit", ctx -> {System.out.println("Exit."); System.exit(0); })
-            .get("/posts/{id}", ctx -> ctx.result("{\"code\": \"OK\"}").contentType("application/json") )
-            .get("/comments/{id}", ctx -> ctx.result("{\"code\": \"OK\"}").contentType("application/json") )
-            .get("/albums/{id}", ctx -> ctx.result("{\"code\": \"OK\"}").contentType("application/json") )
-            .get("/photos/{id}", ctx -> ctx.result("{\"code\": \"OK\"}").contentType("application/json") )
-            .get("/todos/{id}", ctx -> ctx.result("{\"code\": \"OK\"}").contentType("application/json") )
-            // curl -X GET http://localhost:7070:/rendezvous/ -H 'Content-Type: application/json' -d '{"login":"my_login","password":"my_password"}'
-            .get("/rendezvous", ctx -> {
-                System.out.println(ctx.body());
-                ctx.result("{\"code\": \"OK\"}").contentType("application/json");
-            } )
+            .get("/posts/{id}", ctx -> ctx.result("{\"code\": \"OK\"}")
+                .contentType("application/json") )
             .start(7070);
     }
 }
+
+// curl http://localhost:7070/posts/1
+// {"code": "OK"}
 ----
 
 
