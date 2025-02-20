@@ -11,6 +11,8 @@ jbang run asciidoc@wfouche filename.adoc
 
 `kwrk` is a benchmark utility, implemented in Kotlin using the Tulip runtime, which is similar in functionality to `wrk` and `wrk2`. See article "https://nitikagarw.medium.com/getting-started-with-wrk-and-wrk2-benchmarking-6e3cdc76555f[Getting started with wrk and wrk2 benchmarking]" for more information on using these two HTTP benchmark utilities.
 
+`kwrk` records benchmark latencies using `HdrHistogram`, and a future version will display a detailed percentile report of response times just like `wrk2` does.
+
 [source,bash]
 ----
 Usage: kwrk [<options>]
@@ -26,7 +28,7 @@ Options:
 
 === Test Benchmark 1
 
-This test sends HTTP requests at a rate of 10.0 requests per second (rps) to <jsonplaceholder>/posts/1.
+This test sends HTTP requests at a rate of 10 requests per second (rps) to <jsonplaceholder>/posts/1.
 
 .Command
 [source,text]
@@ -59,13 +61,50 @@ image::kwrk-bench-1.png[]
 
 === Test Benchmark 2
 
-TBD.
+This test sends HTTP requests at a rate of 10,000 requests per second (rps) to <localhost:7070>/posts/1.
+
+Open two terminal windows. Run the `Test Http Service` in the first terminal window.
+
+.Terminal 1
+[source,text]
+----
+jbang run HttpService.java
+
+[main] INFO io.javalin.Javalin - Javalin started in 526ms \o/
+[main] INFO io.javalin.Javalin - Listening on http://localhost:7070/
+[main] INFO io.javalin.Javalin - You are running Javalin 6.4.0 (released December 17, 2024).
+----
+
+.Terminal 2
+[source,text]
+----
+jbang run kwrk@wfouche --rps=10000.0 --url=http://localhost:7070/posts/1
+
+kwrk:
+  --rps 10000.0
+  --threads 2
+  --duration 30
+  --repeat 3
+  --url http://localhost:7070/posts/1
+
+Tulip 2.1.5 (Java: Microsoft 21.0.6+7-LTS, Kotlin: 2.0.21)
+
+....
+....
+
+Output filename = kwrk_output.json
+Report filename = kwrk_report.html
+----
+
+The benchmark results are again written to report `kwrk_report.html`.
+
+image::kwrk-bench-2.png[]
 
 == Test Http Service
 
 $ jbang run HttpService.java
 
-.TestHttpService.java
+.HttpService.java
 [source,java]
 ----
 ///usr/bin/env jbang "$0" "$@" ; exit $?
@@ -76,7 +115,7 @@ $ jbang run HttpService.java
 // https://javalin.io/
 import io.javalin.Javalin;
 
-public class TestHttpService {
+public class HttpService {
     public static void main(String[] args) {
         var app = Javalin.create(/*config*/)
             .get("/posts/{id}", ctx -> ctx.result("{\"code\": \"OK\"}")
@@ -88,5 +127,3 @@ public class TestHttpService {
 // curl http://localhost:7070/posts/1
 // {"code": "OK"}
 ----
-
-
