@@ -57,7 +57,11 @@ Report filename = kwrk_report.html
 
 Open file `kwrk_report.html` in a browser to view the benchmark results.
 
+[cols="1a"]
+|===
+|
 image::kwrk-bench-1.png[]
+|===
 
 === Test Benchmark 2
 
@@ -98,7 +102,11 @@ Report filename = kwrk_report.html
 
 The benchmark results are again written to report `kwrk_report.html`.
 
+[cols="1a"]
+|===
+|
 image::kwrk-bench-2.png[]
+|===
 
 == Test Http Service
 
