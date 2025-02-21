@@ -353,7 +353,7 @@ benchmark_config.json
 === Workflows
 
 [[api-user]]
-=== api-user
+==== api-user
 
 [%header,cols="1a,1a"]
 |===
