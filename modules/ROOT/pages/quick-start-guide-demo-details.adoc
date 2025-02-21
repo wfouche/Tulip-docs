@@ -22,7 +22,9 @@ This command creates various files and directories:
 ----
 |===
 
-== App.java
+== Source Code
+
+=== App.java
 
 [source,java]
 ----
@@ -46,7 +48,7 @@ public class App {
 }
 ----
 
-== Configuration Data
+=== Configuration Data
 
 [source,json]
 ----
@@ -164,7 +166,7 @@ public class App {
 }
 ----
 
-== HttpUser.java
+=== HttpUser.java
 
 [source,java]
 ----
@@ -275,7 +277,7 @@ public class HttpUser extends TulipUser {
 }
 ----
 
-== Benchmark Scripts
+=== Benchmark Scripts
 
 .run_bench.sh
 [source,bash]
