@@ -2,7 +2,25 @@
 
 == Overview
 
-TBD.
+Run the following command to create the Java version of the example benchmark program:
+
+* `jbang tulip-cli@wfouche init Java`
+
+This command creates various files and directories:
+
+[cols="1a"]
+|===
+|
+----
+├── benchmark_config.json
+├── io
+│   └── tulip
+│       ├── App.java
+│       └── HttpUser.java
+├── run_bench.cmd
+└── run_bench.sh
+----
+|===
 
 == App.java
 
