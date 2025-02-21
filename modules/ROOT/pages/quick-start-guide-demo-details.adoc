@@ -191,15 +191,12 @@ public class HttpUser extends TulipUser {
         if (getUserId() == 0) {
             logger.info("Java");
             logger.info("Initializing static data");
-            var connectTimeout = Integer.valueOf(
-              getUserParamValue("connectTimeoutMillis"));
-            var readTimeout = Integer.valueOf(
-              getUserParamValue("readTimeoutMillis"));
+            var connectTimeout = Integer.valueOf(getUserParamValue("connectTimeoutMillis"));
+            var readTimeout = Integer.valueOf(getUserParamValue("readTimeoutMillis"));
             var factory = new SimpleClientHttpRequestFactory();
             factory.setConnectTimeout(connectTimeout);
             factory.setReadTimeout(readTimeout);
-            var url = getUserParamValue("protocol")
-                + "://" + getUserParamValue("host");
+            var url = getUserParamValue("protocol") + "://" + getUserParamValue("host");
             restClient = RestClient.builder()
                 .requestFactory(factory)
                 .baseUrl(url)
@@ -215,43 +212,31 @@ public class HttpUser extends TulipUser {
 
     // Action 1: GET /posts/{id}
     public boolean action1() {
-        boolean rc;
-        try {
-            int id = ThreadLocalRandom.current().nextInt(100)+1;
-            String rsp = restClient.get()
-              .uri("/posts/{id}", id)
-              .retrieve()
-              .body(String.class);
-            rc = (rsp != null && rsp.length() > 2);
-        } catch (RestClientException e) {
-           rc = false;
-        }
-        return rc;
+        int id = ThreadLocalRandom.current().nextInt(100)+1;
+        return serviceCall("/posts/{id}", id);
     }
 
     // Action 2: GET /comments/{id}
     public boolean action2() {
-        boolean rc;
-        try {
-            int id = ThreadLocalRandom.current().nextInt(500)+1;
-            String rsp = restClient.get()
-                .uri("/comments/{id}", id)
-                .retrieve()
-                .body(String.class);
-            rc = (rsp != null && rsp.length() > 2);
-        } catch (RestClientException e) {
-            rc = false;
-        }
-        return rc;
+        int id = ThreadLocalRandom.current().nextInt(500)+1;
+        return serviceCall("/comments/{id}", id);
     }
 
     // Action 3: GET /todos/{id}
     public boolean action3() {
+        int id = ThreadLocalRandom.current().nextInt(200)+1;
+        return serviceCall("/todos/{id}", id);
+    }
+
+    public boolean onStop() {
+        return true;
+    }
+
+    private boolean serviceCall(String uri, int id) {
         boolean rc;
         try {
-            int id = ThreadLocalRandom.current().nextInt(200)+1;
             String rsp = restClient.get()
-                .uri("/todos/{id}", id)
+                .uri(uri, id)
                 .retrieve()
                 .body(String.class);
             rc = (rsp != null && rsp.length() > 2);
@@ -259,10 +244,7 @@ public class HttpUser extends TulipUser {
             rc = false;
         }
         return rc;
-    }
 
-    public boolean onStop() {
-        return true;
     }
 
     // RestClient object
@@ -271,7 +253,7 @@ public class HttpUser extends TulipUser {
     // Debug flag
     private static boolean debug = false;
 
-    /// Logger
+    // Logger
     private static final Logger logger = LoggerFactory.getLogger(HttpUser.class);
 
 }
