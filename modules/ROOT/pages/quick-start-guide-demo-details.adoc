@@ -275,7 +275,7 @@ public class HttpUser extends TulipUser {
 }
 ----
 
-== run_bench
+== Benchmark Scripts
 
 .run_bench.sh
 [source,bash]
