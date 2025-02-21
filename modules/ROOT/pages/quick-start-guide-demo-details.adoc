@@ -189,12 +189,15 @@ public class HttpUser extends TulipUser {
         if (getUserId() == 0) {
             logger.info("Java");
             logger.info("Initializing static data");
-            var connectTimeout = Integer.valueOf(getUserParamValue("connectTimeoutMillis"));
-            var readTimeout = Integer.valueOf(getUserParamValue("readTimeoutMillis"));
+            var connectTimeout = Integer.valueOf(
+              getUserParamValue("connectTimeoutMillis"));
+            var readTimeout = Integer.valueOf(
+              getUserParamValue("readTimeoutMillis"));
             var factory = new SimpleClientHttpRequestFactory();
             factory.setConnectTimeout(connectTimeout);
             factory.setReadTimeout(readTimeout);
-            var url = getUserParamValue("protocol") + "://" + getUserParamValue("host");
+            var url = getUserParamValue("protocol")
+                + "://" + getUserParamValue("host");
             restClient = RestClient.builder()
                 .requestFactory(factory)
                 .baseUrl(url)
