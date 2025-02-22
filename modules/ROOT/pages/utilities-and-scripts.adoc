@@ -135,3 +135,30 @@ public class HttpService {
 // curl http://localhost:7070/posts/1
 // {"code": "OK"}
 ----
+
+== Dump Http Headers
+
+$ python3 http_serv_headers.py
+
+.http_serv_headers.py
+[source,python]
+----
+import http.server as SimpleHTTPServer
+import socketserver as SocketServer
+import logging
+
+PORT = 7070
+
+class GetHandler(
+        SimpleHTTPServer.SimpleHTTPRequestHandler
+        ):
+
+    def do_GET(self):
+        logging.error(self.headers)
+        SimpleHTTPServer.SimpleHTTPRequestHandler.do_GET(self)
+
+Handler = GetHandler
+httpd = SocketServer.TCPServer(("", PORT), Handler)
+
+httpd.serve_forever()
+----
