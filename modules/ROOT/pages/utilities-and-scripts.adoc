@@ -18,10 +18,10 @@ jbang run asciidoc@wfouche filename.adoc
 Usage: kwrk [<options>]
 
 Options:
-  --rate=<float>             # default value is <5.0>
-  --threads=<int>           # default value is <2>
+  --rate=<float>             # default value is <5.0> RPS
+  --threads=<int>           # default value is <2> threads
   --duration=<int>          # default value is <30> seconds
-  --iterations=<int>        # default value is <3>
+  --iterations=<int>        # default value is <3> iterations
   --header=<text>           # default value is <User-Agent: kwrk>
   --url=<text>              # no default value
   -h, --help          Show this message and exit
