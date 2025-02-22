@@ -22,8 +22,8 @@ Options:
   --threads=<int>           # default value is 2
   --duration=<int>          # default value is 30 seconds
   --iterations=<int>        # default value is 3
-  --url=<text>              # no default value
   --header=<text>           # default value is User-Agent: kwrk
+  --url=<text>              # no default value
   -h, --help          Show this message and exit
 ----
 
@@ -45,8 +45,8 @@ kwrk:
   --threads 2
   --duration 30
   --iterations 3
-  --url http://jsonplaceholder.typicode.com/posts/1
   --header User-Agent: kwrk
+  --url http://jsonplaceholder.typicode.com/posts/1
 
 Tulip 2.1.5 (Java: Microsoft 21.0.6+7-LTS, Kotlin: 2.0.21)
 
@@ -91,8 +91,8 @@ kwrk:
   --threads 2
   --duration 30
   --iterations 3
-  --url http://localhost:7070/posts/1
   --header User-Agent: kwrk
+  --url http://localhost:7070/posts/1
 
 Tulip 2.1.5 (Java: Microsoft 21.0.6+7-LTS, Kotlin: 2.0.21)
 
