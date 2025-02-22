@@ -18,7 +18,7 @@ jbang run asciidoc@wfouche filename.adoc
 Usage: kwrk [<options>]
 
 Options:
-  --rps=<float>             # default value is 5.0
+  --rate=<float>             # default value is 5.0
   --threads=<int>           # default value is 2
   --duration=<int>          # default value is 30 seconds
   --iterations=<int>        # default value is 3
@@ -34,14 +34,14 @@ This test sends HTTP requests at a rate of 10 requests per second (rps) to <json
 .Command
 [source,bash]
 ----
-jbang run kwrk@wfouche --rps=10.0 --url=http://jsonplaceholder.typicode.com/posts/1
+jbang run kwrk@wfouche --rate=10.0 --url=http://jsonplaceholder.typicode.com/posts/1
 ----
 
 .Command Output
 [source,bash]
 ----
 kwrk:
-  --rps 10.0
+  --rate 10.0
   --threads 2
   --duration 30
   --iterations 3
@@ -84,10 +84,10 @@ jbang run HttpService.java
 .Terminal 2
 [source,bash]
 ----
-jbang run kwrk@wfouche --rps=10000.0 --url=http://localhost:7070/posts/1
+jbang run kwrk@wfouche --rate=10000.0 --url=http://localhost:7070/posts/1
 
 kwrk:
-  --rps 10000.0
+  --rate 10000.0
   --threads 2
   --duration 30
   --iterations 3
