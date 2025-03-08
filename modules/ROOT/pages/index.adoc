@@ -1,5 +1,5 @@
 = Introduction
-:use-kroki: 0
+:use-kroki: 1
 
 https://github.com/wfouche/Tulip[Tulip] is a Kotlin SDK to create load testing, stress testing, and performance regression testing benchmarks for software systems.
 Tulip is a robust solution for evaluating the performance and stability of web applications under varying conditions, ensuring they can handle high traffic and stress levels efficiently.
@@ -15,10 +15,20 @@ A Tulip benchmark program consists of four parts:
 . Tulip runtime .jar file available from Maven Central
 
 ifeval::[{use-kroki} == 0]
+
+[cols="1a"]
+|===
+|
 image::diag0.svg[]
+|===
+
 endif::[]
 
 ifeval::[{use-kroki} == 1]
+
+[cols="1a"]
+|===
+|
 [plantuml,diag0,svg]
 ----
 @startuml
@@ -40,6 +50,8 @@ end split
 #cadetblue:benchmark_report.html;
 @enduml
 ----
+|===
+
 endif::[]
 
 The Tulip runtime is written in https://kotlinlang.org/[Kotlin].
@@ -49,6 +61,20 @@ The following languages are currently supported:
 * Java, Kotlin, Scala
 * Groovy, Jython
 * Clojure (in development)
+
+== Coordinated Omission
+
+Tulip resolves the infamous https://redhatperf.github.io/post/coordinated-omission/[Coordination Omission] problem.
+It reports internal wait-time separately from external wait-time (service time).
+This is a reporting capability unique to Tulip.
+
+Tulip uses https://hdrhistogram.github.io/HdrHistogram/[HdrHistogram] to display Latency by Percentile Distribution graphs.
+
+[cols="1a"]
+|===
+|
+image::image-hdrhisrogram-plot-2.png[]
+|===
 
 == Maven Central
 
