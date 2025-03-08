@@ -67,7 +67,7 @@ The following languages are currently supported:
 Tulip resolves the infamous https://redhatperf.github.io/post/coordinated-omission/[Coordination Omission] problem.
 It reports internal *wait-time* separately from external *service-time*.
 This is a reporting capability unique to Tulip.
-The internal *wait-time* statistics is used to tune the Tulip runtime environment by changing the number of worker threads, or changing the amount of heap space assigned to the Java VM, altering the throughput-rate, or changing worker thread input queue sizes; all in an attempt to reduce the internal wait-time to a reasonable level so that it has a negligible impact on end-user response times.
+The internal *wait-time* statistics is used to tune the Tulip runtime environment by changing the number of worker threads, or changing the amount of heap space assigned to the Java VM, altering the throughput-rate, or adjusting worker thread input queue sizes; all in an attempt to reduce the internal wait-time to a reasonable level so that it has a negligible impact on end-user response times.
 
 "Coordinated Omission is the unintended back pressure a system under test can apply to a load generation tool, that prevents that tool from accurately recording user experience. Response time = wait time + service time. "
 -- Redhat article on Coordinated Omission
