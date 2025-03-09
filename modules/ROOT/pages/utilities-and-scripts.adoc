@@ -48,7 +48,7 @@ kwrk:
   --header User-Agent: kwrk
   --url http://jsonplaceholder.typicode.com/posts/1
 
-Tulip 2.1.5 (Java: Microsoft 21.0.6+7-LTS, Kotlin: 2.0.21)
+Tulip 2.1.6 (Java: Microsoft 21.0.6+7-LTS, Kotlin: 2.0.21)
 
 ....
 ....
@@ -94,7 +94,7 @@ kwrk:
   --header User-Agent: kwrk
   --url http://localhost:7070/posts/1
 
-Tulip 2.1.5 (Java: Microsoft 21.0.6+7-LTS, Kotlin: 2.0.21)
+Tulip 2.1.6 (Java: Microsoft 21.0.6+7-LTS, Kotlin: 2.0.21)
 
 ....
 ....
