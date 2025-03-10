@@ -11,8 +11,6 @@ jbang run asciidoc@wfouche filename.adoc
 
 `kwrk` is a benchmark utility, implemented in Kotlin using the Tulip runtime, which is similar in functionality to `wrk` and `wrk2`. See article "https://nitikagarw.medium.com/getting-started-with-wrk-and-wrk2-benchmarking-6e3cdc76555f[Getting started with wrk and wrk2 benchmarking]" for more information on using these two HTTP benchmark utilities.
 
-`kwrk` records benchmark latencies using https://hdrhistogram.github.io/HdrHistogram/[HdrHistogram], and a future version will display a detailed percentile report of response times just like `wrk2` does.
-
 [source,bash]
 ----
 Usage: kwrk [<options>]
@@ -48,7 +46,7 @@ kwrk:
   --header User-Agent: kwrk
   --url http://jsonplaceholder.typicode.com/posts/1
 
-Tulip 2.1.5 (Java: Microsoft 21.0.6+7-LTS, Kotlin: 2.0.21)
+Tulip 2.1.6 (Java: Microsoft 21.0.6+7-LTS, Kotlin: 2.0.21)
 
 ....
 ....
@@ -94,7 +92,7 @@ kwrk:
   --header User-Agent: kwrk
   --url http://localhost:7070/posts/1
 
-Tulip 2.1.5 (Java: Microsoft 21.0.6+7-LTS, Kotlin: 2.0.21)
+Tulip 2.1.6 (Java: Microsoft 21.0.6+7-LTS, Kotlin: 2.0.21)
 
 ....
 ....
