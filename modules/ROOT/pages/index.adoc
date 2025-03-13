@@ -102,4 +102,8 @@ https://github.com/wfouche/Tulip-docs/
 
 == Twitter/X
 
-https://x.com/Tulip_ltt
+https://x.com/Tulip_ltt[@Tulip_ltt]
+
+== YouTube
+
+https://www.youtube.com/@Tulip_ltt[@Tulip_ltt]
