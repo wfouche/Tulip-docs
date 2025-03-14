@@ -116,7 +116,7 @@ Tulip uses https://hdrhistogram.github.io/HdrHistogram/[HdrHistogram] to display
 image::image-hdrhisrogram-plot-2.png[]
 |===
 
-The performance graphs are contained in the detailed performance report
+The latency graphs are contained in the detailed performance report
 which the Tulip runtime creates for a benchmark suite.
 
 image:image-demo-benchmark-report-html.png[]
