@@ -23,6 +23,24 @@ Similar to well-known tools like JMeter, Gatling, and Locust, Tulip provides pow
 implementation("io.github.wfouche.tulip:tulip-runtime:2.1.6")
 ----
 
+.JBang(Java)
+[source,java]
+----
+///usr/bin/env jbang "$0" "$@" ; exit $?
+//DEPS io.github.wfouche.tulip:tulip-runtime:2.1.6
+....
+//SOURCES FmpHttpUser.java
+//JAVA 21
+
+import io.github.wfouche.tulip.api.TulipApi;
+
+public class App {
+   public static void main(String[] args) {
+      TulipApi.runTulip("benchmark_config.json");
+   }
+}
+----
+
 == Program structure
 
 A Tulip benchmark program consists of four parts:
