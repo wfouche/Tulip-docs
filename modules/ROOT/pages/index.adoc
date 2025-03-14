@@ -31,7 +31,7 @@ implementation("io.github.wfouche.tulip:tulip-runtime:2.1.6")
 ----
 |===
 
-.JBang(Java)
+.JBang(App.java)
 [source,java]
 ----
 ///usr/bin/env jbang "$0" "$@" ; exit $\?
