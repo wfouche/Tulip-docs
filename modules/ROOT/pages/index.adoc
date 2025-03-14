@@ -31,13 +31,10 @@ implementation("io.github.wfouche.tulip:tulip-runtime:2.1.6")
 ----
 |===
 
-[cols="1a"]
-|===
-|
 .JBang(Java)
 [source,java]
 ----
-///usr/bin/env jbang "$0" "$@" ; exit $?
+///usr/bin/env jbang "$0" "$@" ; exit $\?
 //DEPS io.github.wfouche.tulip:tulip-runtime:2.1.6
 ....
 //SOURCES FmpHttpUser.java
@@ -51,7 +48,6 @@ public class App {
    }
 }
 ----
-|===
 
 == Program structure
 
