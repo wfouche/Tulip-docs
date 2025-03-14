@@ -7,8 +7,10 @@ Similar to well-known tools like JMeter, Gatling, and Locust, Tulip provides pow
 
 == Maven Central
 
+.Maven
 [source,xml]
 ----
+<!-- https://mvnrepository.com/artifact/io.github.wfouche.tulip/tulip-runtime -->
 <dependency>
     <groupId>io.github.wfouche.tulip</groupId>
     <artifactId>tulip-runtime</artifactId>
@@ -16,7 +18,12 @@ Similar to well-known tools like JMeter, Gatling, and Locust, Tulip provides pow
 </dependency>
 ----
 
-https://mvnrepository.com/artifact/io.github.wfouche.tulip/tulip-runtime
+.Gradle(Kotlin)
+[source,kotlin]
+----
+// https://mvnrepository.com/artifact/io.github.wfouche.tulip/tulip-runtime
+implementation("io.github.wfouche.tulip:tulip-runtime:2.1.6")
+----
 
 == Program structure
 
