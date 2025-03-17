@@ -127,9 +127,15 @@ https://github.com/wfouche/Tulip/
 
 https://github.com/wfouche/Tulip-docs/
 
-== Twitter/X
+== Social Media
+
+Twitter::
 
 https://x.com/Tulip_ltt[@Tulip_ltt]
+
+BlueSky::
+
+https://bsky.app/profile/tulip-ltt.bsky.social[@Tulip_ltt]
 
 == YouTube
 
