@@ -141,9 +141,18 @@ YouTube::
 
 https://www.youtube.com/@Tulip_ltt[@Tulip_ltt]
 
-== Next Release
+== Tulip Releases
 
-The next release of Tulip is v2.1.7.
+=== Current Release
 
-* https://github.com/wfouche/Tulip/milestone/8[Development task list]
+Tulip v2.1.6::
+
+* https://github.com/wfouche/Tulip/milestone/6?closed=1[Feature list]
+* Release date: 6 March 2025
+
+=== Next Release
+
+Tulip v2.1.7::
+
+* https://github.com/wfouche/Tulip/milestone/8[Task list]
 * Release date: 31 March 2025
