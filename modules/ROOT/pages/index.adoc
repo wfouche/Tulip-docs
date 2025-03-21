@@ -140,3 +140,10 @@ https://bsky.app/profile/tulip-ltt.bsky.social[@Tulip_ltt]
 YouTube::
 
 https://www.youtube.com/@Tulip_ltt[@Tulip_ltt]
+
+== Next Release
+
+The next release of Tulip is v2.1.7.
+
+* https://github.com/wfouche/Tulip/milestone/8[Development task list]
+* Release date: 31 March 2025
