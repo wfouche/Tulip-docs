@@ -1,5 +1,5 @@
 = Introduction
-:use-kroki: 1
+:use-kroki: 0
 
 https://github.com/wfouche/Tulip[Tulip] is a Kotlin SDK to create load testing, stress testing, and performance regression testing benchmarks for software systems.
 Tulip is a robust solution for evaluating the performance and stability of web applications under varying conditions, ensuring they can handle high traffic and stress levels efficiently.
@@ -7,16 +7,38 @@ Similar to well-known tools like JMeter, Gatling, and Locust, Tulip provides pow
 
 == Maven Central
 
+.Maven
 [source,xml]
 ----
 <dependency>
-    <groupId>io.github.wfouche.tulip</groupId>
-    <artifactId>tulip-runtime</artifactId>
-    <version>2.1.7</version>
+   <groupId>io.github.wfouche.tulip</groupId>
+   <artifactId>tulip-runtime</artifactId>
+   <version>2.1.6</version>
 </dependency>
 ----
 
-https://mvnrepository.com/artifact/io.github.wfouche.tulip/tulip-runtime
+.Gradle(Kotlin)
+[source,kotlin]
+----
+implementation("io.github.wfouche.tulip:tulip-runtime:2.1.6")
+----
+
+.JBang(App.java)
+[source,java]
+----
+///usr/bin/env jbang "$0" "$@" ; exit $\?
+//DEPS io.github.wfouche.tulip:tulip-runtime:2.1.6
+//SOURCES FmpHttpUser.java
+//JAVA 21
+
+import io.github.wfouche.tulip.api.TulipApi;
+
+public class App {
+   public static void main(String[] args) {
+      TulipApi.runTulip("benchmark_config.json");
+   }
+}
+----
 
 == Program structure
 
@@ -71,8 +93,8 @@ The Tulip runtime is written in https://kotlinlang.org/[Kotlin].
 Tulip benchmark programs (App and User classes) can be written in any Java Virtual Machine (JVM) programming language.
 The following languages are currently supported:
 
-* Java, Kotlin, Scala, Groovy
-* Jython, Clojure (in development)
+* Java, Kotlin
+* Scala, Groovy
 
 == Coordinated Omission
 
@@ -81,7 +103,7 @@ It reports internal *wait-time* separately from external *service-time*.
 This is a reporting capability unique to Tulip.
 The internal *wait-time* statistics is used to tune the Tulip runtime environment by changing the number of worker threads, or changing the amount of heap space assigned to the Java VM, altering the throughput-rate, or adjusting worker thread input queue sizes; all in an attempt to reduce the internal wait-time to a reasonable level so that it has a negligible impact on end-user response times.
 
-"Coordinated Omission is the unintended back pressure a system under test can apply to a load generation tool, that prevents that tool from accurately recording user experience. Response time = wait time + service time. "
+"Coordinated Omission is the unintended back pressure a system under test can apply to a load generation tool that prevents that tool from accurately recording user experience. Response time = wait time + service time. "
 -- Redhat article on Coordinated Omission
 
 == Reporting
@@ -94,12 +116,43 @@ Tulip uses https://hdrhistogram.github.io/HdrHistogram/[HdrHistogram] to display
 image::image-hdrhisrogram-plot-2.png[]
 |===
 
+The latency graphs are contained in the detailed performance report
+which the Tulip runtime creates for a benchmark suite.
+
+image:image-demo-benchmark-report-html.png[]
+
 == Source Code
 
 https://github.com/wfouche/Tulip/
 
 https://github.com/wfouche/Tulip-docs/
 
-== Twitter/X
+== Social Media
 
-https://x.com/Tulip_ltt
+Twitter::
+
+https://x.com/Tulip_ltt[@Tulip_ltt]
+
+BlueSky::
+
+https://bsky.app/profile/tulip-ltt.bsky.social[@Tulip_ltt]
+
+YouTube::
+
+https://www.youtube.com/@Tulip_ltt[@Tulip_ltt]
+
+== Tulip Releases
+
+=== Current Release
+
+Tulip v2.1.6::
+
+* https://github.com/wfouche/Tulip/milestone/6?closed=1[Feature list]
+* Release date: 6 March 2025
+
+=== Next Release
+
+Tulip v2.1.7::
+
+* https://github.com/wfouche/Tulip/milestone/8[Task list]
+* Release date: 31 March 2025
