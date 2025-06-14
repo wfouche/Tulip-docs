@@ -7,7 +7,7 @@ Tulip has the following software requirements that must be met it can be used:
 
 ** Test if Java is installed by running command: `java -version`
 
-* https://www.jbang.dev/[JBang] 0.121.0 or later version is installed
+* https://www.jbang.dev/[JBang] 0.126.3 or later version is installed
 
 ** Test if JBang is installed by running command: `jbang --version`
 
