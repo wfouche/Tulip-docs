@@ -4,7 +4,7 @@
 
 [source,bash]
 ----
-jbang run asciidoc@wfouche filename.adoc
+jbang run asciidoctorj@wfouche filename.adoc
 ----
 
 == Kwrk
