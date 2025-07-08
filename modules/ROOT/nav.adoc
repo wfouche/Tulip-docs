@@ -5,5 +5,4 @@
 * xref:quick-start-guide.adoc[]
 ** xref:quick-start-guide-demo-bench.adoc[Benchmark Example]
 ** xref:quick-start-guide-demo-details.adoc[Benchmark Details]
-* xref:bench-user-guide.adoc[]
 * xref:utilities-and-scripts.adoc[Benchmark Utilities]
