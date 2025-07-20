@@ -81,7 +81,7 @@ asciidoc:
     kroki-server-url: https://kroki.io
     kroki-fetch-diagram: true
     page-pagination: ''
-    source-highlighter: shiki
+    # source-highlighter: shiki
   extensions:
     - '@asciidoctor/tabs'
     - 'asciidoctor-kroki'
