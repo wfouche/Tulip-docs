@@ -1,4 +1,5 @@
 = HTTP Benchmark Details
+:source-linenums-option: true
 
 == Overview
 
