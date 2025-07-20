@@ -27,7 +27,7 @@ This command creates various files and directories:
 
 === App.java
 
-[source,java,linenums]
+[source,java]
 ----
 ///usr/bin/env jbang "$0" "$@" ; exit $?
 //DEPS io.github.wfouche.tulip:tulip-runtime:2.1.5
@@ -51,7 +51,7 @@ public class App {
 
 === Configuration Data
 
-[source,json,linenums]
+[source,json]
 ----
 {
     "actions": {
@@ -169,7 +169,7 @@ public class App {
 
 === HttpUser.java
 
-[source,java,linenums]
+[source,java]
 ----
 package io.tulip;
 
@@ -265,7 +265,7 @@ public class HttpUser extends TulipUser {
 === Benchmark Scripts
 
 .run_bench.sh
-[source,bash,linenums]
+[source,bash]
 ----
 #!/bin/bash
 rm -f benchmark_report.html
@@ -280,7 +280,7 @@ lynx -dump -width 205 benchmark_report.html
 <1> Command that starts the benchmark
 
 .run_bench.cmd
-[source,bash,linenums]
+[source,bash]
 ----
 if exist benchmark_report.html del benchmark_report.html
 set JBANG_JAVA_OPTIONS=-server -Xms2g -Xmx2g -XX:+UseZGC -XX:+ZGenerational
