@@ -124,14 +124,14 @@ https://echarts.apache.org/en/index.html[Apache ECharts] are used to display the
 |===
 |
 .Global Throughput Chart
-image::image-throughput[]
+image::image-throughput.png[]
 |===
 
 [cols="1a"]
 |===
 |
 .Global Latency Chart
-image::image-latency-ms[]
+image::image-latency-ms.png[]
 |===
 
 The performance charts are contained in the detailed performance report
