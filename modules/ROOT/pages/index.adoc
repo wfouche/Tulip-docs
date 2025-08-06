@@ -225,14 +225,19 @@ https://www.youtube.com/@Tulip_ltt[@Tulip_ltt]
 
 === Current Release
 
-Tulip v2.1.7::
+Tulip v2.1.8::
 
 * https://github.com/wfouche/Tulip/milestone/8?closed=1[Feature list]
 * Release date: April 2025
 
+Tulip v2.1.7::
+
+* https://github.com/wfouche/Tulip/milestone/9?closed=1[Feature list]
+* Release date: August 2025
+
 === Next Release
 
-Tulip v2.1.8::
+Tulip v2.1.9::
 
-* https://github.com/wfouche/Tulip/milestone/9[Task list]
+* https://github.com/wfouche/Tulip/milestone/10[Task list]
 * Release date: Q3, 2025
