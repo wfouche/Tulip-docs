@@ -82,8 +82,8 @@ split again
 end split
 :EXECUTE;
 #greenyellow:benchmark_output.json;
-#cadetblue:benchmark_report.html;
 #cadetblue:benchmark_report.json;
+#cadetblue:benchmark_report.html;
 @enduml
 ----
 |===
