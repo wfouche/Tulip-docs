@@ -180,7 +180,8 @@ Tulip uses https://hdrhistogram.github.io/HdrHistogram/[HdrHistogram] to display
 image::image-hdrhisrogram-plot-2.png[]
 |===
 
-https://echarts.apache.org/en/index.html[Apache ECharts] are used to display the following two charts.
+https://echarts.apache.org/en/index.html[Apache ECharts] are used to display the following charts.
+https://echarts.apache.org/en/index.html[Apache ECharts] are used to display the following charts.
 
 [cols="1a"]
 |===
