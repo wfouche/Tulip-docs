@@ -230,7 +230,7 @@ Tulip v2.1.9::
 
 * https://github.com/wfouche/Tulip/milestone/10?closed=1[Feature list]
 
-* Release date: 9 August 2025
+* Release date: 18 August 2025
 
 
 === Previous Releases
@@ -238,7 +238,7 @@ Tulip v2.1.9::
 Tulip v2.1.8::
 
 * https://github.com/wfouche/Tulip/milestone/9?closed=1[Feature list]
-* Release date: 9 August 2025
+* Release date: 6 August 2025
 
 Tulip v2.1.7::
 
