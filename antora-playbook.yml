@@ -74,14 +74,18 @@ output:
 antora:
   extensions:
     - require: 'antora-shiki-extension'
+      theme: 'dracula'
       use_line_numbers: true
+      languages:
+        - java
+        - xml
     - '@antora/lunr-extension'
 asciidoc:
   attributes:
     kroki-server-url: https://kroki.io
     kroki-fetch-diagram: true
     page-pagination: ''
-    # source-highlighter: shiki
+    source-highlighter: shiki
   extensions:
     - '@asciidoctor/tabs'
     - 'asciidoctor-kroki'
