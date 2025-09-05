@@ -1,4 +1,5 @@
 = Utilities and Scripts
+:shiki-line-numbers: true
 
 == Asciidoc
 
