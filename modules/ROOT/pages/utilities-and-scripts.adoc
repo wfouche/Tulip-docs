@@ -142,7 +142,7 @@ public class HttpService {
 $ python3 http_serv_headers.py
 
 .http_serv_headers.py
-[source,python]
+[source,python,linenums]
 ----
 import http.server as SimpleHTTPServer
 import socketserver as SocketServer
