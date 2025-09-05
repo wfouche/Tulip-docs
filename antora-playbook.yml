@@ -79,7 +79,7 @@ antora:
         - xml
         - kotlin
         - python
-        - console
+        - shellscript
     - '@antora/lunr-extension'
 asciidoc:
   attributes:
