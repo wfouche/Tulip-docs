@@ -2,7 +2,7 @@
 
 == Asciidoc
 
-[source,bash]
+[source,console]
 ----
 jbang run asciidoctorj@asciidoctor filename.adoc
 ----
@@ -11,7 +11,7 @@ jbang run asciidoctorj@asciidoctor filename.adoc
 
 `kwrk` is a benchmark utility, implemented in Kotlin using the Tulip runtime, which is similar in functionality to `wrk` and `wrk2`. See article "https://nitikagarw.medium.com/getting-started-with-wrk-and-wrk2-benchmarking-6e3cdc76555f[Getting started with wrk and wrk2 benchmarking]" for more information on using these two HTTP benchmark utilities.
 
-[source,bash]
+[source,console]
 ----
 Usage: kwrk [<options>]
 
@@ -70,7 +70,7 @@ This test sends HTTP requests at a rate of 10,000 requests per second (rps) to <
 Open two terminal windows. Run the *Test Http Service* in the first terminal window, and *kwrk* in the second terminal window.
 
 .Terminal 1
-[source,bash]
+[source,console]
 ----
 jbang run HttpService.java
 
@@ -80,7 +80,7 @@ jbang run HttpService.java
 ----
 
 .Terminal 2
-[source,bash]
+[source,console]
 ----
 jbang run kwrk@wfouche --rate=10000.0 --url=http://localhost:7070/posts/1
 
