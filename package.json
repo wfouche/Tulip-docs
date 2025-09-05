@@ -2,13 +2,13 @@
 	"name": "tulip-ltt",
 	"version": "2.0",
 	"dependencies": {
-		"antora-shiki-extension": "^1.0.0-alpha.6",
+		"antora-shiki-extension": "^1.0.0",
 		"asciidoctor-kroki": "^0.18.1"
 	},
 	"devDependencies": {
-		"@antora/cli": "3.1.10",
-		"@antora/lunr-extension": "1.0.0-alpha.9",
-		"@antora/site-generator": "3.1.10",
+		"@antora/cli": "3.1.12",
+		"@antora/lunr-extension": "1.0.0-alpha.10",
+		"@antora/site-generator": "3.1.12",
 		"@asciidoctor/tabs": "1.0.0-beta.6"
 	}
 }
