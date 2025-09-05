@@ -82,7 +82,6 @@ antora:
         - kotlin
         - python
         - shellscript
-      use_line_numbers: true
     - '@antora/lunr-extension'
 asciidoc:
   attributes:
