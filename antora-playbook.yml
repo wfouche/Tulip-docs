@@ -75,7 +75,7 @@ antora:
   extensions:
     - require: 'antora-shiki-extension'
       theme: "darcula"
-      themes: ["material-theme", "dracula", "slack-dark", "github-light"]
+      themes: ["material-theme", "darcula", "slack-dark", "github-light"]
       languages:
         - java
         - xml
