@@ -74,11 +74,9 @@ output:
 antora:
   extensions:
     - require: 'antora-shiki-extension'
-      theme: 'dracula'
       use_line_numbers: true
       languages:
         - java
-        - xml
     - '@antora/lunr-extension'
 asciidoc:
   attributes:
