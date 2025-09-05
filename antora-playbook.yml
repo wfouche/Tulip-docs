@@ -74,7 +74,7 @@ output:
 antora:
   extensions:
     - require: 'antora-shiki-extension'
-      theme: "dracula"
+      theme: "github-light"
       themes: ["material-theme", "dracula", "slack-dark", "github-light"]
       languages:
         - java
