@@ -516,17 +516,3 @@ A3 --> A0: 1.000
 | *num_threads* | 8
 | *enabled* | True
 |===
-
-== Console
-
-[source,shellscript]
-----
-# Install JBang
-curl -Ls https://sh.jbang.dev | bash -s - app setup
-
-# Create your first script
-jbang init --template=cli hello.java
-
-# Run it
-jbang hello.java Max!
-----
