@@ -96,18 +96,3 @@ View the configuration report file `benchmark_config.html` in a browser.
 image::image-demo-benchmark-config-report-1.png[]
 |===
 
-== Fatjar Packaging
-
-The demo benchmark can be packaged into a single self-contained JAR file using command:
-
-* `jbang export fatjar io/tulip/App.java`
-
-The benchmark program and runtime are packaged into jar file `App-fatjar.jar` and can then be run with command:
-
-* `java -jar App-fatjar.jar`, or with additional JVM settings as
-
-* `java -server -Xms2g -Xmx2g -XX:+UseZGC -XX:+ZGenerational -jar App-fatjar.jar`
-
-
-Files `App-fatjar.jar` and `benchmark_config.json` can be copied to another machine
-if the benchmark program needs to be run elsewhere.
