@@ -35,9 +35,11 @@ While the benchmark program is running the `benchmark_output.json` file is incre
 |
 ----
 ├── benchmark_config.adoc
+├── benchmark_config.html
 ├── benchmark_config.json
 ├── benchmark_output.json
 ├── benchmark_report.html
+|── benchmark_report.json
 ├── io
 │   └── tulip
 │       ├── App.java
@@ -66,29 +68,7 @@ image::image-demo-benchmark-report-html.png[]
 
 == Step 4—view configuration
 
-The configuration report is stored in file `benchmark_config.adoc`. Convert this file to html with command:
-
-* `jbang run asciidoc@wfouche benchmark_config.adoc`
-
-[cols="1a"]
-|===
-|
-----
-├── benchmark_config.adoc
-├── benchmark_config.html
-├── benchmark_config.json
-├── benchmark_output.json
-├── benchmark_report.html
-├── io
-│   └── tulip
-│       ├── App.java
-│       └── HttpUser.java
-├── run_bench.cmd
-├── run_bench.sh
-----
-|===
-
-View the configuration report file `benchmark_config.html` in a browser.
+The configuration report is stored in file `benchmark_config.html`.
 
 [cols="1a"]
 |===
