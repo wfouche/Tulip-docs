@@ -28,7 +28,7 @@ Run script `run_bench.sh` (Linux or macOS), or `run_bench.cmd` (Windows) to star
 
 While the benchmark program is running the `benchmark_output.json` file is incrementally updated with benchmark results.
 
-== Step 3—view results
+== Step 3—view benchmark results
 
 [cols="1a"]
 |===
@@ -75,4 +75,47 @@ The configuration report is stored in file `benchmark_config.html`.
 |
 image::image-demo-benchmark-config-report-1.png[]
 |===
+
+== Step 5—view JSON summary
+
+File `benchmark_report.json` contains the same results that are displayed in the HTML benchmark report. Having the results in a JSON file format, makes it easy to validate the final results.
+
+.json_report.py
+[source,json]
+----
+import json
+from collections import OrderedDict
+
+filename = "benchmark_report.json"
+fileObj = open(filename)
+jb = json.load(fileObj, object_pairs_hook=OrderedDict)
+
+def report(name):
+  print name
+  print "  ", jb["benchmarks"][name]["actions"]["summary"]["aps"], "aps"
+  print "  ", jb["benchmarks"][name]["actions"]["summary"]["aps_target_rate"], "aps_target_rate"
+
+report("REST1")
+report("REST2")
+report("REST3")
+report("REST3.max")
+----
+
+`$ jbang run jython-cli@jython json_report.py`
+
+[source,shellscript]
+----
+REST1
+   10.0 aps
+   10.0 aps_target_rate
+REST2
+   10.0 aps
+   10.0 aps_target_rate
+REST3
+   10.0 aps
+   10.0 aps_target_rate
+REST3.max
+   117.977777778 aps
+   0.0 aps_target_rate
+----
 
