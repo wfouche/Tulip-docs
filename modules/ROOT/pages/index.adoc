@@ -26,18 +26,7 @@ implementation("io.github.wfouche.tulip:tulip-runtime:2.1.9")
 .JBang(App.java)
 [source,java,linenums]
 ----
-///usr/bin/env jbang "$0" "$@" ; exit $\?
-//DEPS io.github.wfouche.tulip:tulip-runtime:2.1.9
-//SOURCES FmpHttpUser.java
-//JAVA 21
-
-import io.github.wfouche.tulip.api.TulipApi;
-
-public class App {
-   public static void main(String[] args) {
-      TulipApi.runTulip("benchmark_config.json");
-   }
-}
+include::example$App.java[]
 ----
 
 == Program structure
