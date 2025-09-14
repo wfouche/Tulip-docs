@@ -17,7 +17,9 @@ public class FixJBangComments {
         List<String> lines = Files.readAllLines(path);
 
         List<String> fixedLines =
-                lines.stream().map(FixJBangComments::fixCommentSpacing).collect(Collectors.toList());
+                lines.stream()
+                        .map(FixJBangComments::fixCommentSpacing)
+                        .collect(Collectors.toList());
 
         if (fileUpdated) {
             Files.write(path, fixedLines);
@@ -37,7 +39,7 @@ public class FixJBangComments {
             return line.replaceFirst("///\\s+", "///");
         } else if (line.startsWith("// ")) {
             return line.replaceFirst("//\\s+", "//");
-    }   else {
+        } else {
             return line;
         }
     }
