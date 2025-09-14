@@ -5,7 +5,7 @@
 import io.github.wfouche.tulip.api.TulipApi;
 
 public class App {
-  public static void main(String[] args) {
-    TulipApi.runTulip("benchmark_config.json");
-  }
+    public static void main(String[] args) {
+        TulipApi.runTulip("benchmark_config.json");
+    }
 }
