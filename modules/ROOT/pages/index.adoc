@@ -238,4 +238,4 @@ Tulip v2.1.7::
 
 Tulip v2.1.10::
 
-* Release date: Q4, 2025
+* Release date: Q3, 2025
