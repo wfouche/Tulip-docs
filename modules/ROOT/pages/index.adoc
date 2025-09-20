@@ -13,14 +13,14 @@ Similar to well-known tools like JMeter, Gatling, and Locust, Tulip provides pow
 <dependency>
    <groupId>io.github.wfouche.tulip</groupId>
    <artifactId>tulip-runtime</artifactId>
-   <version>2.1.9</version>
+   <version>2.1.10</version>
 </dependency>
 ----
 
 .Gradle(Kotlin)
 [source,kotlin]
 ----
-implementation("io.github.wfouche.tulip:tulip-runtime:2.1.9")
+implementation("io.github.wfouche.tulip:tulip-runtime:2.1.10")
 ----
 
 .JBang(App.java)
