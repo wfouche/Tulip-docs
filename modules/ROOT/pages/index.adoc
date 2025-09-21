@@ -244,4 +244,5 @@ Tulip v2.1.7::
 
 Tulip v2.1.11::
 
+* https://github.com/wfouche/Tulip/milestone/12[Feature list]
 * Release date: Q4, 2025
