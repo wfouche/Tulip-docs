@@ -1,5 +1,5 @@
 = Introduction
-:use-kroki: 0
+:use-kroki: 1
 
 https://github.com/wfouche/Tulip[Tulip] is a SDK for the Java VM (JVM) to create load testing, stress testing, and performance regression testing benchmarks for software systems.
 Tulip is a robust solution for evaluating the performance and stability of web applications under varying conditions, ensuring they can handle high traffic and stress levels efficiently.
