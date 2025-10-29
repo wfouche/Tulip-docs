@@ -1,5 +1,5 @@
 = Introduction
-:use-kroki: 1
+:use-kroki: 0
 
 https://github.com/wfouche/Tulip[Tulip] is a SDK for the Java VM (JVM) to create load testing, stress testing, and performance regression testing benchmarks for software systems.
 Tulip is a robust solution for evaluating the performance and stability of web applications under varying conditions, ensuring they can handle high traffic and stress levels efficiently.
@@ -13,7 +13,7 @@ Similar to well-known tools like JMeter, Gatling, and Locust, Tulip provides pow
 <dependency>
    <groupId>io.github.wfouche.tulip</groupId>
    <artifactId>tulip-runtime</artifactId>
-   <version>2.1.11</version>
+   <version>2.1.12</version>
 </dependency>
 ----
 https://mvnrepository.com/artifact/io.github.wfouche.tulip/tulip-runtime
@@ -21,7 +21,7 @@ https://mvnrepository.com/artifact/io.github.wfouche.tulip/tulip-runtime
 .Gradle(Kotlin)
 [source,kotlin]
 ----
-implementation("io.github.wfouche.tulip:tulip-runtime:2.1.11")
+implementation("io.github.wfouche.tulip:tulip-runtime:2.1.12")
 ----
 
 .JBang(App.java)
@@ -94,7 +94,9 @@ A benchmark execution workflow is specified in Tulip as a Markov chain over a se
 [%header,cols="1a,1a"]
 |===
 | Workflow Diagram | Specification
-|[plantuml,wfd0,svg]
+|
+ifeval::[{use-kroki} == 1]
+[plantuml,wfd0,svg]
 ----
 @startuml
 state "-" as A0
@@ -120,6 +122,10 @@ A3 --> A0: 0.80
 A4 --> A0: 1.00
 @enduml
 ----
+endif::[]
+ifeval::[{use-kroki} == 0]
+image::wfd0.svg[]
+endif::[]
 |
 [source,json]
 ----
@@ -222,13 +228,17 @@ https://www.youtube.com/@Tulip_ltt[@Tulip_ltt]
 
 === Current Release
 
+Tulip v2.1.12::
+
+* https://github.com/wfouche/Tulip/milestone/13?closed=1[Feature list]
+
+* Release date: 17 October 2025
+
+=== Previous Releases
+
 Tulip v2.1.11::
 
 * https://github.com/wfouche/Tulip/milestone/12?closed=1[Feature list]
-
-* Release date: 23 September 2025
-
-=== Previous Releases
 
 Tulip v2.1.10::
 
@@ -247,14 +257,9 @@ Tulip v2.1.8::
 * https://github.com/wfouche/Tulip/milestone/9?closed=1[Feature list]
 * Release date: 6 August 2025
 
-Tulip v2.1.7::
-
-* https://github.com/wfouche/Tulip/milestone/8?closed=1[Feature list]
-* Release date: April 2025
-
 == Next Release
 
-Tulip v2.1.12::
+Tulip v2.1.13::
 
-* https://github.com/wfouche/Tulip/milestone/13[Feature list]
+* https://github.com/wfouche/Tulip/milestone/14[Feature list]
 * Release date: Q4, 2025
