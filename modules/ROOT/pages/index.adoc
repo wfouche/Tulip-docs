@@ -181,7 +181,6 @@ image::image-hdrhisrogram-plot-2.png[]
 === Apache eCharts
 
 https://echarts.apache.org/en/index.html[Apache ECharts] are used to display the following charts.
-https://echarts.apache.org/en/index.html[Apache ECharts] are used to display the following charts.
 
 [cols="1a"]
 |===
