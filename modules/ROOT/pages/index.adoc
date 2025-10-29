@@ -161,6 +161,8 @@ The internal *wait-time* statistics is used to tune the Tulip runtime environmen
 
 == Reporting
 
+=== HdrHistogram
+
 Tulip uses https://hdrhistogram.github.io/HdrHistogram/[HdrHistogram] to display Latency by Percentile Distribution charts.
 
 [cols="1a"]
@@ -169,6 +171,8 @@ Tulip uses https://hdrhistogram.github.io/HdrHistogram/[HdrHistogram] to display
 .Percentile Distribution Chart
 image::image-hdrhisrogram-plot-2.png[]
 |===
+
+=== Apache eCharts
 
 https://echarts.apache.org/en/index.html[Apache ECharts] are used to display the following charts.
 https://echarts.apache.org/en/index.html[Apache ECharts] are used to display the following charts.
@@ -186,6 +190,8 @@ image::image-throughput.png[]
 .Global Latency Chart
 image::image-latency-ms.png[]
 |===
+
+=== Performance Report
 
 The performance charts are contained in the detailed performance report
 which the Tulip runtime creates for a benchmark suite.
