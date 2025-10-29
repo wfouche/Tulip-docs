@@ -1,5 +1,5 @@
 = Introduction
-:use-kroki: 1
+:use-kroki: 0
 
 https://github.com/wfouche/Tulip[Tulip] is a SDK for the Java VM (JVM) to create load testing, stress testing, and performance regression testing benchmarks for software systems.
 Tulip is a robust solution for evaluating the performance and stability of web applications under varying conditions, ensuring they can handle high traffic and stress levels efficiently.
@@ -216,13 +216,17 @@ https://www.youtube.com/@Tulip_ltt[@Tulip_ltt]
 
 === Current Release
 
-Tulip v2.1.11::
+Tulip v2.1.12::
 
-* https://github.com/wfouche/Tulip/milestone/12?closed=1[Feature list]
+* https://github.com/wfouche/Tulip/milestone/13?closed=1[Feature list]
 
 * Release date: 23 September 2025
 
 === Previous Releases
+
+Tulip v2.1.11::
+
+* https://github.com/wfouche/Tulip/milestone/12?closed=1[Feature list]
 
 Tulip v2.1.10::
 
@@ -241,14 +245,9 @@ Tulip v2.1.8::
 * https://github.com/wfouche/Tulip/milestone/9?closed=1[Feature list]
 * Release date: 6 August 2025
 
-Tulip v2.1.7::
-
-* https://github.com/wfouche/Tulip/milestone/8?closed=1[Feature list]
-* Release date: April 2025
-
 == Next Release
 
-Tulip v2.1.12::
+Tulip v2.1.13::
 
-* https://github.com/wfouche/Tulip/milestone/13[Feature list]
+* https://github.com/wfouche/Tulip/milestone/14[Feature list]
 * Release date: Q4, 2025
