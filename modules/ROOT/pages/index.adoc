@@ -86,6 +86,7 @@ The following languages are currently supported:
 
 * Java, Kotlin
 * Scala, Groovy
+* Jython
 
 === Workflows
 
