@@ -7,7 +7,7 @@ Similar to well-known tools like JMeter, Gatling, and Locust, Tulip provides pow
 
 == Load Test Driven Development
 
-Tulip was designed to champion Load Test-Driven (LTD) development. Traditionally, software load testing is delayed until the final phases of a project. LTD fundamentally shifts this focus by advocating for load testing to begin as early as possible in the software creation process, while still adhering to standard Test-Driven Development (TDD) best practices
+Tulip is designed to champion Load Test-Driven (LTD) development. Traditionally, software load testing is delayed until the final phases of a project. LTD fundamentally shifts this focus by advocating for load testing to begin as early as possible in the software creation process, while still adhering to standard Test-Driven Development (TDD) best practices
 
 Tulip empowers software engineers to start load testing their code on  day 1 of a project and not delay this important work until day N-10. See the following blog post for more information about LTD:
 
