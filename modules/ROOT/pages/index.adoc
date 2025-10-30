@@ -13,31 +13,6 @@ Tulip empowers software engineers to start load testing their code on  day 1 of 
 
 * https://blog.octoperf.com/load-test-driven-development/
 
-== Maven Central
-
-.Maven
-[source,xml]
-----
-<dependency>
-   <groupId>io.github.wfouche.tulip</groupId>
-   <artifactId>tulip-runtime</artifactId>
-   <version>2.1.12</version>
-</dependency>
-----
-https://mvnrepository.com/artifact/io.github.wfouche.tulip/tulip-runtime
-
-.Gradle(Kotlin)
-[source,kotlin]
-----
-implementation("io.github.wfouche.tulip:tulip-runtime:2.1.12")
-----
-
-.JBang(App.java)
-[source,java,linenums]
-----
-include::example$App.java[]
-----
-
 == Program structure
 
 A Tulip benchmark program consists of four parts:
@@ -241,6 +216,31 @@ YouTube::
 https://www.youtube.com/@Tulip_ltt[@Tulip_ltt]
 
 == Tulip Releases
+
+=== Maven Central
+
+.Maven
+[source,xml]
+----
+<dependency>
+   <groupId>io.github.wfouche.tulip</groupId>
+   <artifactId>tulip-runtime</artifactId>
+   <version>2.1.12</version>
+</dependency>
+----
+https://mvnrepository.com/artifact/io.github.wfouche.tulip/tulip-runtime
+
+.Gradle(Kotlin)
+[source,kotlin]
+----
+implementation("io.github.wfouche.tulip:tulip-runtime:2.1.12")
+----
+
+.JBang(App.java)
+[source,java,linenums]
+----
+include::example$App.java[]
+----
 
 === Current Release
 
