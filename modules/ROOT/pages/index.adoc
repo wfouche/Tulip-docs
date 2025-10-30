@@ -16,7 +16,7 @@ See the following blog post for more information about Load-Test Driven Developm
 
 * https://blog.octoperf.com/load-test-driven-development/
 
-== Program structure
+== Tulip Program Structure
 
 A Tulip benchmark program consists of four parts:
 
