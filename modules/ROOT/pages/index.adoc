@@ -255,34 +255,11 @@ Tulip v2.2.0::
 
 === Previous Releases
 
-Tulip v2.1.12::
+Tulip v2.1.17::
 
-* https://github.com/wfouche/Tulip/milestone/13?closed=1[Feature list]
+* https://github.com/wfouche/Tulip/releases/tag/v2.1.17[Release Notes]
 
-* Release date: 17 October 2025
-
-Tulip v2.1.11::
-
-* https://github.com/wfouche/Tulip/milestone/12?closed=1[Feature list]
-
-* Release date: 23 September 2025
-
-Tulip v2.1.10::
-
-* https://github.com/wfouche/Tulip/milestone/11?closed=1[Feature list]
-
-* Release date: 19 September 2025
-
-Tulip v2.1.9::
-
-* https://github.com/wfouche/Tulip/milestone/10?closed=1[Feature list]
-
-* Release date: 18 August 2025
-
-Tulip v2.1.8::
-
-* https://github.com/wfouche/Tulip/milestone/9?closed=1[Feature list]
-* Release date: 6 August 2025
+* Release date: 23 January 2026
 
 == Next Release
 
