@@ -48,7 +48,7 @@ split
    #greenyellow:benchmark_config.json;
 split again
    -[hidden]->
-   #beige:User.class;
+   #beige:User.java;
 split again
    -[hidden]->
    #azure:tulip-runtime.jar;
