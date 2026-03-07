@@ -197,9 +197,9 @@ image:image-demo-benchmark-report-html.png[]
 
 == Source Code
 
-https://github.com/wfouche/Tulip/
+https://github.com/tulipltt/Tulip/
 
-https://github.com/wfouche/Tulip-docs/
+https://github.com/tulipltt/Tulip-docs/
 
 == Social Media
 
