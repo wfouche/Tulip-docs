@@ -5,6 +5,12 @@ The https://github.com/tulipltt/Tulip[Tulip Load Testing Toolkit (LTT)] is a SDK
 Tulip is a robust solution for evaluating the performance and stability of web applications under varying conditions, ensuring they can handle high traffic and stress levels efficiently.
 Similar to well-known tools like JMeter, Gatling, and Locust, Tulip provides powerful capabilities to simulate real-world scenarios and generate comprehensive reports, helping developers identify and resolve potential bottlenecks.
 
+== News
+
+Feb 9, 2026::
+
+* https://medium.com/@werner.fouche/rest-api-load-testing-with-tulip-and-locust-75f28c00fa1f[REST API Load Testing with Tulip and Locust]
+
 == Load-Test Driven Development
 
 Tulip is designed to champion Load-Test Driven Development (LTDD).
