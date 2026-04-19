@@ -7,17 +7,17 @@ Similar to well-known tools like JMeter, Gatling, and Locust, Tulip provides pow
 
 == News
 
-=== Releases
-
-Mar 12, 2026::
-
-* Tulip 2.3.0 released to new Maven Central location: https://mvnrepository.com/artifact/io.github.tulipltt/tulip-runtime
-
 === Articles
 
 Feb 9, 2026::
 
 * https://medium.com/@werner.fouche/rest-api-load-testing-with-tulip-and-locust-75f28c00fa1f[REST API Load Testing with Tulip and Locust]
+
+=== Releases
+
+Mar 12, 2026::
+
+* Tulip 2.3.0 released to new Maven Central location: https://mvnrepository.com/artifact/io.github.tulipltt/tulip-runtime
 
 == Load-Test Driven Development
 
